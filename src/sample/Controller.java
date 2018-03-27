@@ -188,7 +188,7 @@ public class Controller implements Initializable{
     /**
      * createWarehouseInstance()
      * helps create a warehouse and displays that on all ComboBoxes
-     * @param event
+     * @param event - button click
      */
 
 

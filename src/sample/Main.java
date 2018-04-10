@@ -16,7 +16,7 @@ public class Main extends Application {
      * @param primaryStage - the Window
      * @throws Exception
      */
-
+	//mitchell testing
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("project2gui.fxml"));

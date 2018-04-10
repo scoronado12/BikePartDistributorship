@@ -7,5 +7,10 @@ public class LoginAccount extends Person {
 	
 	protected String username;
 	protected String password;
+	
+	public LoginAccount() {
+		this.username = "";
+		this.password = "";
+	}
 
 }

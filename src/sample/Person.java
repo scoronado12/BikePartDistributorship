@@ -15,7 +15,7 @@ public class Person {
 	protected String email;
 	
 	/**
-	 * Constructor
+	 * Person Object
 	 * @param firstName
 	 * @param lastName
 	 */
@@ -26,16 +26,16 @@ public class Person {
 	}
 	
 	/**
-	 * getName
-	 * returns full name
+	 * getName() - returns
+	 * @return full name
 	 */
 	public String getName() {
 		return firstName + " " + lastName;
 	}
 	
 	/**
-	 * getEmail
-	 * returns email
+	 * getEmail()
+	 * @return email
 	 */
 	public String getEmail() {
 		return email;

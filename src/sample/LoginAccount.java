@@ -1,3 +1,5 @@
+package sample;
+
 /**\
  * A simple login account with a username and password, as well as a name and email
  * @author Mitchell Bisson

@@ -8,9 +8,10 @@ public class LoginAccount extends Person {
 	protected String username;
 	protected String password;
 	
-	public LoginAccount() {
-		this.username = "";
-		this.password = "";
+	public LoginAccount(String username, String password, String firstName, String lastName) {
+		this.username = username;
+		this.password = password;
+		super(firstName, lastName);
 	}
 
 }

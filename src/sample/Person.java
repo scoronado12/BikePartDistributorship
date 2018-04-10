@@ -16,7 +16,7 @@ public class Person {
 	protected String email;
 	
 	/**
-	 * Constructor
+	 * Person Object
 	 * @param firstName
 	 * @param lastName
 	 */
@@ -27,14 +27,20 @@ public class Person {
 	}
 	
 	/**
+<<<<<<< HEAD
 	 * getName
 	 * @return firstName + lastName
+=======
+	 * getName() - returns
+	 * @return full name
+>>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
 	 */
 	public String getName() {
 		return firstName + " " + lastName;
 	}
 	
 	/**
+<<<<<<< HEAD
 	 * getFirstName
 	 * @return firstName
 	 */
@@ -68,6 +74,9 @@ public class Person {
 	
 	/**
 	 * getEmail
+=======
+	 * getEmail()
+>>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
 	 * @return email
 	 */
 	public String getEmail() {

@@ -10,7 +10,7 @@ import java.io.IOException;
 
 
 public class Main extends Application {
-// TEST
+// TEST John
     /**
      * Start(Stage primaryStage) - Gives the JavaFX Window certain properties
      * @param primaryStage - the Window

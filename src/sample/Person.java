@@ -1,3 +1,4 @@
+package sample;
 /**
  * Person, a simple class that will be the main super class for loginAccount and its subclasses
  * @author Mitchell Bisson
@@ -27,18 +28,58 @@ public class Person {
 	
 	/**
 	 * getName
-	 * returns full name
+	 * @return firstName + lastName
 	 */
 	public String getName() {
 		return firstName + " " + lastName;
 	}
 	
 	/**
+	 * getFirstName
+	 * @return firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	/**
+	 * getLastName
+	 * @return lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+	
+	/**
+	 * setFirstName
+	 * @param firstName
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	/**
+	 * setLastName
+	 * @param lastName
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	/**
 	 * getEmail
-	 * returns email
+	 * @return email
 	 */
 	public String getEmail() {
 		return email;
+	}
+	
+	/**
+	 * setEmail
+	 * @param String email
+	 */
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

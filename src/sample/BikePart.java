@@ -8,6 +8,7 @@
 package sample;
 
 public class BikePart{
+
     /**
      * Fields include the following:
      * Name of parts (PartName) as String
@@ -19,6 +20,7 @@ public class BikePart{
      * ArrayList of Entries
      * double of a finalCost dependent on the isOnSale() Boolean
      */
+
     protected String partName;
     protected int partNumber;
     protected double listPrice;
@@ -41,6 +43,7 @@ public class BikePart{
 
 
     public BikePart(String partName, int partNumber, double listPrice, double salesPrice, boolean isOnSale, int quantity) {
+
         this.partName = partName;
         this.partNumber = partNumber;
         this.listPrice = listPrice;

@@ -73,10 +73,7 @@ public class Person {
 	}
 	
 	/**
-	 * getEmail
-=======
 	 * getEmail()
->>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
 	 * @return email
 	 */
 	public String getEmail() {
@@ -85,10 +82,17 @@ public class Person {
 	
 	/**
 	 * setEmail
-	 * @param String email
+	 * @param email - as String
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+
+	/**toString - prints out the object as a string
+	 *
+	 * @return
+	 */
+	public String toString(){ return firstName + " " + lastName + " " + email; }
 
 }

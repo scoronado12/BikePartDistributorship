@@ -24,6 +24,7 @@ public class LoginAccount extends Person {
 		this.username = username;
 		this.password = password;
 	}
+
 	
 	/**
 	 * getUsername()

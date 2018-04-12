@@ -1,6 +1,6 @@
 package sample;
 
-public class WhManager extends LoginAccount{
+public class WhManager extends LoginAccount {
 
 
     /**
@@ -26,6 +26,8 @@ public class WhManager extends LoginAccount{
     public void updateInventory(){
 
     }
+
+    public String toString() { return firstName + " " + lastName + " " + username; }
 
 
 

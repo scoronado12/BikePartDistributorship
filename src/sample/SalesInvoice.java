@@ -76,5 +76,66 @@ public class SalesInvoice {
 		totalCost = cost;
 	}
 	
+	//getters go here
+	//need getters for:
+	/*
+	 * customerName
+	 * employeeName
+	 * time
+	 * partSold
+	 * totalCost
+	 * totalQuantity
+	 */
+	/**
+	 * getCustomerName
+	 * @return customerName ; returns customer name
+	 */
+	public String getCustomerName() {
+		return customerName;
+	}
+	
+	/**
+	 * getEmployeeName
+	 * @return employeeName ; returns employee name
+	 */
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	
+	/**
+	 * getTime
+	 * @return time ; returns the time of the sale
+	 */
+	public DateFormat getTime() {
+		return dateFormat.format(time);
+	}
+	
+	/**
+	 * getPartSold
+	 * @return partSold ; returns the part sold
+	 */
+	public BikePart getPartSold() {
+		return partSold;
+	}
+	
+	/**
+	 * getTotalCost
+	 * @return totalCost ; returns total cost
+	 */
+	public double getTotalCost() {
+		return totalCost;
+	}
+	
+	/**
+	 * getTotalQuantity
+	 * @return totalQuantity ; returns total quantity sold
+	 */
+	public int getTotalQuantity() {
+		return totalQuantity;
+	}
+	
+	public String toString() {
+		return "The customer's name was " + customerName +".  The employee who sold the part's name was " + employeeName + ".  The transaction took place at " + dateFormat.format(time) +".  There were " + totalQuantity + " " + partSold.getPartName() + "s sold.  The total cost of this transaction was $" + totalCost + ".";
+	}
 
 }

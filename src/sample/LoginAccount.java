@@ -1,5 +1,7 @@
 package sample;
 
+import java.util.ArrayList;
+
 /**
 =======
 
@@ -9,7 +11,8 @@ package sample;
  *
  */
 public class LoginAccount extends Person {
-	
+
+	protected ArrayList users = new ArrayList<LoginAccount>(); //database of users
 	protected String username;
 	protected String password;
 	/**
@@ -23,6 +26,17 @@ public class LoginAccount extends Person {
 	    super(firstName, lastName);
 		this.username = username;
 		this.password = password;
+	}
+
+	/** add() - Adds a enry to the ArrayList of usernames
+	 *
+	 * @param user
+	 * @return size as int
+	 */
+
+	public int add(LoginAccount user){
+		users.add(user);
+		return users.size();
 	}
 
 	
@@ -52,7 +66,7 @@ public class LoginAccount extends Person {
 	
 	/**
 	 * setPassword
-	 * @param username - creates a new username
+	 * @param password - changes the password
 	 */
 	public void setPassword(String password) {
 		this.password = password;

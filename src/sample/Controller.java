@@ -80,11 +80,13 @@ public class Controller implements Initializable{
     private TextArea contentsDeliveryFile;
     @FXML
     private ComboBox<Warehouse> importTo;
+    
     //Transfer Tab
     @FXML
     private TextField grabTransferFile;
     @FXML
     private TextArea contentsTransferFile;
+    
     //Create Warehouse Tab
     @FXML
     private TextField warehouseNameField;

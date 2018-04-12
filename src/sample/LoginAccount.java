@@ -15,19 +15,17 @@ public class LoginAccount extends Person {
 	protected ArrayList users = new ArrayList<LoginAccount>(); //database of users
 	protected String username;
 	protected String password;
-	protected Person person
+	protected Person person;
 	
 	/**
 	 * LoginAccount Constructor
 	 * @param username ; username for the account
 	 * @param password ; password for the account
-	 * @param firstName ; creates a first name for the person
-	 * @param lastName ; creates a last name for the person
 	 */
 	public LoginAccount(String username, String password, Person person) {
 		this.username = username;
 		this.password = password;
-		this.person = person
+		this.person = person;
 	}
 
 	/** add() - Adds a enry to the ArrayList of usernames

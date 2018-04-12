@@ -25,7 +25,11 @@ public class Person {
 		this.lastName = lastName;
 		this.email = firstName.substring(0,1) + lastName + "@bikeparts.com";
 	}
-	
+
+	public Person() {
+
+	}
+
 	/**
 	 * getName() - returns
 	 * @return full name

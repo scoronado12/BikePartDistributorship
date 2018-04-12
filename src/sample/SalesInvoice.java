@@ -106,7 +106,7 @@ public class SalesInvoice {
 	 * getTime
 	 * @return time ; returns the time of the sale
 	 */
-	public DateFormat getTime() {
+	public String getTime() {
 		return dateFormat.format(time);
 	}
 	

@@ -2,7 +2,7 @@ package sample;
 
 public class SalesAssociate extends LoginAccount {
     /**
-     * LoginAccount Constructor
+     * SalesAssociate Constructor
      *
      * @param username  ; username for the account
      * @param password  ; password for the account

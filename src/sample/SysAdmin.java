@@ -2,7 +2,7 @@ package sample;
 
 public class SysAdmin extends LoginAccount {
     /**
-     * LoginAccount Constructor
+     * System Administrator Constructor
      *
      * @param username  ; username for the account
      * @param password  ; password for the account

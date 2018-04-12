@@ -27,20 +27,14 @@ public class Person {
 	}
 	
 	/**
-<<<<<<< HEAD
-	 * getName
-	 * @return firstName + lastName
-=======
 	 * getName() - returns
 	 * @return full name
->>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
 	 */
 	public String getName() {
 		return firstName + " " + lastName;
 	}
 	
 	/**
-<<<<<<< HEAD
 	 * getFirstName
 	 * @return firstName
 	 */

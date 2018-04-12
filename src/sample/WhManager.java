@@ -27,7 +27,11 @@ public class WhManager extends LoginAccount {
 
     }
 
-    public String toString() { return firstName + " " + lastName + " " + username; }
+    /**
+     * toString - prints out the object instance as a String
+     * @return
+     */
+    public String toString() { return "Warehouse Manager: " +firstName + " " + lastName + " " + username; }
 
 
 

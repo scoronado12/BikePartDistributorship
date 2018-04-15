@@ -17,6 +17,8 @@ public class OfficeManager extends LoginAccount {
      * @param lastName  ; creates a last name for the person
      */
 	
+	//ArrayList of BikeParts needed to be ordered
+	ArrayList<BikePart> toOrder = new ArrayList<BikePart>();
 	
 	public OfficeManager(String username, String password, String firstName, String lastName) {
         super(username, password, firstName, lastName);
@@ -43,12 +45,20 @@ public class OfficeManager extends LoginAccount {
 		return totalPaycheck;
 	}
 	
-	public ArrayList<BikePart> orderParts(ArrayList<SalesInvoices> si){
+	public void orderParts(ArrayList<SalesInvoices> si){
 		ArrayList<BikePart> bpal = new ArrayList<BikePart>();
 		for(int i = 0; i < si.size(); i++) {
 			bpal.add(si.get(i).getPartSold())
 		}
-		return bpal;
+		toOrder = bpal;
+	}
+	
+	public ArrayList<BikePart> getOrder(){
+		return toOrder;
+	}
+	
+	public void clearToOrder() {
+		toOrder.clear();
 	}
 
 }

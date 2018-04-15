@@ -1,6 +1,11 @@
 package sample;
 
 import java.util.ArrayList;
+/**
+ * OfficeManager class
+ * @author Mitchell Bisson
+ *
+ */
 public class OfficeManager extends LoginAccount {
 	
 	/**

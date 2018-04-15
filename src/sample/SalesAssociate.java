@@ -1,6 +1,8 @@
 package sample;
 
 import java.util.ArrayList;
+import basic.LoginAccount;
+import basic.BikePart;
 
 public class SalesAssociate extends LoginAccount {
     /**

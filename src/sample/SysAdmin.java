@@ -1,4 +1,5 @@
 package sample;
+import basic.LoginAccount;
 
 public class SysAdmin extends LoginAccount {
     /**

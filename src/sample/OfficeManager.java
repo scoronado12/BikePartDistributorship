@@ -23,7 +23,7 @@ public class OfficeManager extends LoginAccount {
 	ArrayList<BikePart> toOrder = new ArrayList<BikePart>();
 	
 	public OfficeManager(String username, String password, String firstName, String lastName) {
-        super(username, password, firstName, lastName);
+        super(username, password);
     }
 	/**
 	 * generatePaycheckAndOrderParts ; a method that generates a paycheck, orders the parts that have been sold,
@@ -39,7 +39,7 @@ public class OfficeManager extends LoginAccount {
 		ArrayList<SalesInvoice> si = sa.getTotalSales();
 		
 		for(int i = 0; i < si.size(); i++) {
-			moneyPerSale = si.get(i).getTotalCost;
+			moneyPerSale = si.get(i).getTotalCost();
 			totalPaycheck = moneyPerSale * 0.15;
 		}
 		orderParts(si);
@@ -47,10 +47,10 @@ public class OfficeManager extends LoginAccount {
 		return totalPaycheck;
 	}
 	
-	public void orderParts(ArrayList<SalesInvoices> si){
+	public void orderParts(ArrayList<SalesInvoice> si){
 		ArrayList<BikePart> bpal = new ArrayList<BikePart>();
 		for(int i = 0; i < si.size(); i++) {
-			bpal.add(si.get(i).getPartSold())
+			bpal.add(si.get(i).getPartSold());
 		}
 		toOrder = bpal;
 	}

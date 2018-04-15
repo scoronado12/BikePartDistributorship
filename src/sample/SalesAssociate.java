@@ -35,6 +35,10 @@ public class SalesAssociate extends LoginAccount {
     public ArrayList<SalesInvoice> getTotalSales(){
     	return totalSales;
     }
+    
+    public void resetSales() {
+    	totalSales.clear();
+    }
 
     @Override
     public String toString() {

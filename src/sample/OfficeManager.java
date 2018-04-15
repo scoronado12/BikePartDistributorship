@@ -1,6 +1,6 @@
 package sample;
 
-
+import java.util.ArrayList;
 public class OfficeManager extends LoginAccount {
 	
 	/**
@@ -15,5 +15,18 @@ public class OfficeManager extends LoginAccount {
 	public OfficeManager(String username, String password, String firstName, String lastName) {
         super(username, password, firstName, lastName);
     }
+	
+	public double generatePaycheck(SalesAssociate sa) {
+		double totalPaycheck = 0.0;
+		double moneyPerSale = 0.0;
+		
+		ArrayList<SalesInvoice> si = sa.getTotalSales();
+		
+		for(int i = 0; i < si.size(); i++) {
+			moneyPerSale = si.get(i).getTotalCost;
+			totalPaycheck = moneyPerSale * 0.15;
+		}
+		return totalPaycheck;
+	}
 
 }

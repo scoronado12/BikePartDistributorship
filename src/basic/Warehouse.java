@@ -17,9 +17,9 @@ public class Warehouse{
 
     private String warehouseName;
 
-    protected BikePart bp;
-    protected Warehouse wh;
-    protected ArrayList<BikePart> BikePartList = new ArrayList<>();
+    public BikePart bp;
+    public Warehouse wh;
+    public ArrayList<BikePart> BikePartList = new ArrayList<>();
 
 
     /** Warehouse Object

@@ -10,9 +10,13 @@ public class WhManager extends LoginAccount {
      * @param password  ; password for the account
      * @param firstName ; creates a first name for the person
      * @param lastName  ; creates a last name for the person
+     * @param Warehouse; The maintained warehouse of the user
      */
-    public WhManager(String username, String password, String firstName, String lastName) {
-        super(username, password, firstName, lastName);
+    protected Warehouse wh;
+
+    public WhManager(String username, String password) {
+        super(username, password);
+
     }
 
     public void displayInventory(){

@@ -10,7 +10,7 @@ public class SysAdmin extends LoginAccount {
      * @param lastName  ; creates a last name for the person
      */
     public SysAdmin(String username, String password, String firstName, String lastName) {
-        super(username, password, firstName, lastName);
+        super(username, password);
     }
 
     /**

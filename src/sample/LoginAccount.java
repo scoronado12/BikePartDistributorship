@@ -22,10 +22,9 @@ public class LoginAccount extends Person {
 	 * @param username ; username for the account
 	 * @param password ; password for the account
 	 */
-	public LoginAccount(String username, String password, Person person) {
+	public LoginAccount(String username, String password) {
 		this.username = username;
 		this.password = password;
-		this.person = person;
 	}
 
 	/** add() - Adds a enry to the ArrayList of usernames

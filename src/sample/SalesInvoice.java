@@ -16,7 +16,7 @@ public class SalesInvoice {
 	
 	
 	String customerName;
-	DateFormat dateFormat = new SimpleDateFormat("HH:mm");
+	DateFormat dateFormat = new SimpleDateFormat("HH:mm y-M-d");
     Date time = new Date();
 	String employeeName;
 	BikePart partSold;
@@ -75,17 +75,7 @@ public class SalesInvoice {
 	public void setTotalCost(double cost) {
 		totalCost = cost;
 	}
-	
-	//getters go here
-	//need getters for:
-	/*
-	 * customerName
-	 * employeeName
-	 * time
-	 * partSold
-	 * totalCost
-	 * totalQuantity
-	 */
+
 	/**
 	 * getCustomerName
 	 * @return customerName ; returns customer name

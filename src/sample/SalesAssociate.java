@@ -16,7 +16,7 @@ public class SalesAssociate extends LoginAccount {
 	ArrayList<SalesInvoice> totalSales = new ArrayList<SalesInvoice>();
 	
     public SalesAssociate(String username, String password, String firstName, String lastName) {
-        super(username, password, firstName, lastName);
+        super(username, password);
     }
     
     /**

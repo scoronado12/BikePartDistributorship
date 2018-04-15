@@ -16,6 +16,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+import basic.Warehouse;
+import basic.BikePart;
+
 /** The Controller defines the JavaFX Objects on the screen and connects them to methods.
  *  This class is also responsible for displaying things to the screen.
  * @author scoronado

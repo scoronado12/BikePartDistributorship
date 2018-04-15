@@ -36,7 +36,7 @@ public class OfficeManager extends LoginAccount {
 		
 		for(int i = 0; i < si.size(); i++) {
 			moneyPerSale = si.get(i).getTotalCost;
-			totalPaycheck = moneyPerSale * 0.15;
+			totalPaycheck += moneyPerSale * 0.15;
 		}
 		orderParts(si);
 		sa.resetSales();

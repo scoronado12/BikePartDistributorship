@@ -27,7 +27,7 @@ public class SalesAssociate extends LoginAccount {
      * @param quantitySold ; the total amount of the part sold
      */
     public void sell(String customerName, BikePart partSold, int quantitySold) {
-    	String associateName = firstName + lastName;
+    	String associateName = firstName + " " + lastName;
     	SalesInvoice newSale = new SalesInvoice(customerName, associateName, partSold, quantitySold);
     	totalSales.add(newSale);
     }

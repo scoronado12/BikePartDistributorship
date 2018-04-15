@@ -91,7 +91,6 @@ public class Controller implements Initializable{
     @FXML
     private TextField warehouseNameField;
 
-
     private static ArrayList<Warehouse> warehouseArrayList = new ArrayList<>();
     private static ObservableList<Warehouse> warehouseObservableList = FXCollections.observableList(warehouseArrayList);
 
@@ -111,7 +110,6 @@ public class Controller implements Initializable{
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     /**reloadWhs() - Loads warehouses listed in WarehouseDB.txt file
@@ -124,7 +122,7 @@ public class Controller implements Initializable{
     void reloadWhs() throws FileNotFoundException{
         System.out.println("Reloading saved warehouses (if any)");
 
-        //loop through Wh names and pulls data from whNameInventory.txt (example)
+        //loop through WH names and pulls data from whNameInventory.txt (example)
 
         for (Warehouse wh : warehouseObservableList){
             System.out.println("Importing contents of " + wh.getWarehouseName() + "Inventory.txt");
@@ -136,18 +134,12 @@ public class Controller implements Initializable{
                 e.printStackTrace();
             }*/
         }
-
-
     }
-
-
 
 
     /** defineOtherWhs() - imports existence of other warehouses
      *
      */
-
-
     @FXML
     void defineOtherWhs() throws NullPointerException{
         System.out.println("defineOtherWhs() running");
@@ -179,7 +171,6 @@ public class Controller implements Initializable{
      *
      * @param event
      */
-
     @FXML
     public void exitApplication(ActionEvent event){
         Platform.exit();
@@ -192,8 +183,6 @@ public class Controller implements Initializable{
      * helps create a warehouse and displays that on all ComboBoxes
      * @param event - button click
      */
-
-
     @FXML
     void createWarehouseInstance (ActionEvent event){
 
@@ -222,8 +211,6 @@ public class Controller implements Initializable{
      * @param event
      * @throws IOException
      */
-
-
     @FXML
     void importDeliveryFile(ActionEvent event) throws IOException {
 
@@ -265,7 +252,6 @@ public class Controller implements Initializable{
      * SellByPartNumber() Sells parts by part number
      * @param event
      */
-
     @FXML
     void sellByPartNumber(ActionEvent event){
 

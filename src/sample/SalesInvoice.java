@@ -12,8 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SalesInvoice {
-	
-	
+
 	
 	String customerName;
 	DateFormat dateFormat = new SimpleDateFormat("HH:mm y-M-d");

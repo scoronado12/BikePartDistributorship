@@ -5,7 +5,7 @@
  *  @since 2018-01-26
  *
  */
-package sample;
+package basic;
 
 public class BikePart{
 

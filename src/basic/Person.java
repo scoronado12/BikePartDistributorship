@@ -1,4 +1,4 @@
-package sample;
+package basic;
 /**
  * Person, a simple class that will be the main super class for loginAccount and its subclasses
  * @author Mitchell Bisson

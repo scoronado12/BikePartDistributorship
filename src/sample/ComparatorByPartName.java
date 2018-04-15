@@ -1,5 +1,5 @@
 package sample;
-
+import basic.BikePart;
 import java.util.Comparator;
 
 /**ComparatorByPartName()

@@ -13,13 +13,22 @@ public class SysAdmin extends LoginAccount {
         super(username, password, firstName, lastName);
     }
 
-
-    public void createUser(){
-
+    /**
+     * createUser - creates a new user
+     * @param newUser
+     */
+    public void createUser(LoginAccount newUser){
+        System.out.println("Creating user " + newUser.getUsername());
+        users.add(newUser);
     }
 
-    public void deleteUser(){
-
+    /**
+     * deleteUser() - removes a user from the list of Users
+     * @param firedUser
+     */
+    public void deleteUser(LoginAccount firedUser){
+        System.out.println("Removing user " + firedUser.getUsername());
+        users.remove(firedUser);
     }
 
     public String toString(){

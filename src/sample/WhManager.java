@@ -28,7 +28,7 @@ public class WhManager extends LoginAccount {
     }
 
     public void displayInventory(){
-
+    	wh.printAll();
     }
 
     public void transferInventory(){

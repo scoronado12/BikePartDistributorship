@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="project2bikepart.FXMLDocumentController">
+  <children>
+    <TabPane layoutX="0.0" layoutY="0.0" prefHeight="357.0000999999975" prefWidth="392.0000999999975" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Check Stock">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextArea layoutX="14.0" layoutY="118.0" prefHeight="195.0" prefWidth="365.0" wrapText="true" />
+                <TextField layoutX="197.0" layoutY="37.0" prefWidth="71.0" />
+                <Label layoutX="62.0" layoutY="40.0" text="Find Parts with Less Than" />
+                <Label layoutX="268.0" layoutY="40.0" text="Units" />
+                <Button layoutX="169.0" layoutY="85.0" mnemonicParsing="false" text="Locate" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Manage Invoices">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label layoutX="33.0" layoutY="26.0" text="Date Range:" />
+                <TextField layoutX="98.0" layoutY="23.0" prefWidth="186.0" />
+                <TextField layoutX="98.0" layoutY="62.0" prefWidth="186.0" />
+                <Label layoutX="186.0" layoutY="40.0" prefHeight="22.0" prefWidth="24.0" text="-">
+                  <font>
+                    <Font size="14.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label layoutX="65.0" layoutY="100.0" text="Client:" />
+                <TextField layoutX="98.0" layoutY="97.0" prefWidth="200.0" />
+                <Button layoutX="169.0" layoutY="137.0" mnemonicParsing="false" text="Search" />
+                <TextArea layoutX="14.0" layoutY="172.0" prefHeight="141.0" prefWidth="365.0" wrapText="true" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Generate Commission">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField layoutX="132.0" layoutY="18.0" prefWidth="200.0" />
+                <Label layoutX="49.0" layoutY="21.0" text="Sales Associate:" />
+                <TextField layoutX="97.0" layoutY="63.0" prefWidth="200.0" />
+                <TextField layoutX="97.0" layoutY="103.0" prefWidth="200.0" />
+                <Label layoutX="32.0" layoutY="66.0" text="Date Range:" />
+                <Label font="$x1" layoutX="192.0" layoutY="84.0" minHeight="16.0" prefHeight="16.0" text="-" />
+                <Button layoutX="136.0" layoutY="143.0" mnemonicParsing="false" text="Generate Paycheck" />
+                <TextArea layoutX="14.0" layoutY="173.0" prefHeight="140.0" prefWidth="365.0" wrapText="true" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Search">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <MenuButton fx:id="menuSSA" layoutX="143.0" layoutY="23.0" mnemonicParsing="false" text="Select Mode">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleSellAction" text="Alphabetical Search" fx:id="modeSell" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleSearchAction" text="Numerical Search" fx:id="modeSearch" />
+                  </items>
+                </MenuButton>
+                <TextArea fx:id="textAreaSS" layoutX="14.0" layoutY="157.0" prefHeight="156.0" prefWidth="365.0" wrapText="true" />
+                <TextField fx:id="textSSTab" layoutX="138.0" layoutY="54.0" prefWidth="184.0" visible="true" />
+                <Label fx:id="labelSellMode" disable="false" layoutX="23.0" layoutY="57.0" text="Enter Part Number:" visible="false" />
+                <Label fx:id="labelSearchMode" layoutX="35.0" layoutY="57.0" text="Enter Part Name:" visible="true" />
+                <Button fx:id="buttonSearch" layoutX="169.0" layoutY="128.0" onAction="#handleSearchSellButtonAction" text="Search" visible="true" />
+                <Label fx:id="labelSSData" layoutX="91.0" layoutY="90.0" text="Choose Database:" visible="true" />
+                <ChoiceBox layoutX="194.0" layoutY="87.0" prefWidth="90.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

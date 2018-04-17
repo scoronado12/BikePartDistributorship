@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="project2bikepart.FXMLDocumentController">
+  <children>
+    <TabPane layoutX="0.0" layoutY="0.0" prefHeight="357.0000999999975" prefWidth="392.0000999999975" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Inventory Manager">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField fx:id="textFieldInv" layoutX="118.0" layoutY="96.0" prefWidth="200.0" visible="false" />
+                <MenuButton fx:id="menuInvMan" layoutX="155.0" layoutY="23.0" mnemonicParsing="false" prefWidth="126.0" text="Select a Mode">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#HandleFileMode" text="Inventory File" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleManualMode" text="Manual Input" />
+                  </items>
+                </MenuButton>
+                <Text layoutX="42.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Inventory By:" />
+                <RadioButton fx:id="radioUpdate" layoutX="51.0" layoutY="64.0" mnemonicParsing="false" text="Move Inventory" visible="false">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="groupFile" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="radioNewInv" layoutX="196.0" layoutY="64.0" mnemonicParsing="false" selected="false" text="New Inventory" toggleGroup="$groupFile" visible="false" />
+                <Label fx:id="labelFilename" layoutX="28.0" layoutY="99.0" text="Enter Filename:" visible="false" />
+                <TextArea fx:id="textAreaInv" layoutX="14.0" layoutY="180.0" prefHeight="133.0" prefWidth="365.0" visible="false" wrapText="true" />
+                <Button fx:id="buttonFileAdd" layoutX="125.0" layoutY="124.0" mnemonicParsing="false" onAction="#HandleAddButton" text="Process File" visible="false" />
+                <TextField fx:id="tfName" layoutX="98.0" layoutY="54.0" prefWidth="138.0" visible="false" />
+                <TextField fx:id="tfPartNo" layoutX="98.0" layoutY="79.0" prefWidth="138.0" visible="false" />
+                <TextField fx:id="tfPrice" layoutX="281.0" layoutY="79.0" prefWidth="64.0" visible="false" />
+                <TextField fx:id="tfSale" layoutX="281.0" layoutY="108.0" prefWidth="64.0" visible="false" />
+                <Label fx:id="labelPrice" layoutX="247.0" layoutY="82.0" text="Price:" visible="false" />
+                <Label fx:id="labelSale" layoutX="222.0" layoutY="111.0" text="Sale Price:" visible="false" />
+                <Label fx:id="labelNo" layoutX="13.0" layoutY="82.0" text="Part Number:" visible="false" />
+                <Label fx:id="labelName" layoutX="25.0" layoutY="57.0" text="Part Name:" visible="false" />
+                <Label fx:id="labelQuan" layoutX="30.0" layoutY="108.0" text="Quantity:" visible="false" />
+                <TextField fx:id="tfQuan" layoutX="98.0" layoutY="105.0" prefWidth="37.999900000002526" visible="false" />
+                <Button fx:id="buttonMan" layoutX="163.0" layoutY="153.0" mnemonicParsing="false" onAction="#HandleManualButton" text="Add Part" visible="false" />
+                <CheckBox fx:id="onSaleCheckBox" layoutX="281.0" layoutY="57.0" mnemonicParsing="false" text="On Sale?" visible="false" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Search">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <MenuButton fx:id="menuSSA" layoutX="143.0" layoutY="23.0" mnemonicParsing="false" text="Select Mode">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleSellAction" text="Alphabetical Search" fx:id="modeSell" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleSearchAction" text="Numerical Search" fx:id="modeSearch" />
+                  </items>
+                </MenuButton>
+                <TextArea fx:id="textAreaSS" layoutX="14.0" layoutY="157.0" prefHeight="156.0" prefWidth="365.0" wrapText="true" />
+                <TextField fx:id="textSSTab" layoutX="138.0" layoutY="54.0" prefWidth="184.0" visible="true" />
+                <Label fx:id="labelSellMode" disable="false" layoutX="23.0" layoutY="57.0" text="Enter Part Number:" visible="false" />
+                <Label fx:id="labelSearchMode" layoutX="35.0" layoutY="57.0" text="Enter Part Name:" visible="true" />
+                <Button fx:id="buttonSearch" layoutX="169.0" layoutY="128.0" onAction="#handleSearchSellButtonAction" text="Search" visible="true" />
+                <Label fx:id="labelSSData" layoutX="91.0" layoutY="90.0" text="Choose Database:" visible="true" />
+                <ChoiceBox layoutX="194.0" layoutY="87.0" prefWidth="90.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Sort">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextArea fx:id="textAreaSort" layoutX="14.0" layoutY="148.0" prefHeight="165.0" prefWidth="364.0" wrapText="true" />
+                <Button fx:id="sortButton" layoutX="166.0" layoutY="112.0" mnemonicParsing="false" onAction="#HandleSortButton" prefHeight="22.0" prefWidth="49.0" text="Sort" />
+                <MenuButton fx:id="menuSort" ellipsisString="..." layoutX="197.0" layoutY="80.0" mnemonicParsing="false" popupSide="BOTTOM" text="Select" textAlignment="CENTER">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#HandleSortName" text="Part Name" fx:id="byName" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleSortNumber" text="Part Number" fx:id="byNumber" />
+                  </items>
+                </MenuButton>
+                <Label layoutX="78.0" layoutY="83.0" text="Choose Sort Method:" />
+                <Label layoutX="20.0" layoutY="25.0" text="Your Home Database:" />
+                <Label layoutX="152.0" layoutY="25.0" prefWidth="145.0" text="Stand-In Text">
+                  <font>
+                    <Font size="15.0" />
+                  </font>
+                </Label>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

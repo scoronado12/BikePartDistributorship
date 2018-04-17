@@ -21,9 +21,9 @@ public class OfficeManager extends LoginAccount {
 	
 	//ArrayList of BikeParts needed to be ordered
 	ArrayList<BikePart> toOrder = new ArrayList<BikePart>();
-	
+	//to push
 	public OfficeManager(String username, String password, String firstName, String lastName) {
-        super(username, password);
+        super(username, password, firstName, lastName);
     }
 	/**
 	 * generatePaycheckAndOrderParts ; a method that generates a paycheck, orders the parts that have been sold,

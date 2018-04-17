@@ -13,12 +13,13 @@ public class SalesAssociate extends LoginAccount {
      * @param firstName ; creates a first name for the person
      * @param lastName  ; creates a last name for the person
      */
+	//to push
 	
 	//ArrayList to keep track of each sale
 	ArrayList<SalesInvoice> totalSales = new ArrayList<SalesInvoice>();
 	
     public SalesAssociate(String username, String password, String firstName, String lastName) {
-        super(username, password);
+        super(username, password, firstName, lastName);
     }
     
     /**

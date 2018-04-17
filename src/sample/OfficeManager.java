@@ -46,7 +46,7 @@ public class OfficeManager extends LoginAccount {
 		sa.resetSales();
 		return totalPaycheck;
 	}
-	
+	//need to change so it gives a file of what needs to be ordered
 	public void orderParts(ArrayList<SalesInvoice> si){
 		ArrayList<BikePart> bpal = new ArrayList<BikePart>();
 		for(int i = 0; i < si.size(); i++) {

@@ -30,11 +30,11 @@ public class WhManager extends LoginAccount {
     public void displayInventory(){
     	wh.printAll();
     }
-
-    public void transferInventory(){
-
+    //needs to take in a text file
+    public void transferInventory(Warehouse toMoveTo, BikePart bp, int quantityToMove){
+    	
     }
-
+    //needs to take in a text file
     public void updateInventory(){
 
     }

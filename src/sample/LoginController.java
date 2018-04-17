@@ -36,6 +36,12 @@ public class LoginController {
     @FXML
     void loginAction(ActionEvent e){
 
+        String userName;
+        String password;
+
+        userName = userNameField.getText();
+        password = passwordField.getText();
+
 
     }
 

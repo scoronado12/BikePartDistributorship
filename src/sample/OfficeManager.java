@@ -23,7 +23,7 @@ public class OfficeManager extends LoginAccount {
 	ArrayList<BikePart> toOrder = new ArrayList<BikePart>();
 	
 	public OfficeManager(String username, String password, String firstName, String lastName) {
-        super(username, password);
+        super(username, password, firstName, lastName);
     }
 	/**
 	 * generatePaycheckAndOrderParts ; a method that generates a paycheck, orders the parts that have been sold,

@@ -35,6 +35,24 @@ public class Warehouse{
         this.BikePartList = inventory;
 
     }
+    
+    /**
+     * Warehouse Object
+     * Default constructor
+     */
+      public Warehouse(){
+      warehouseName = "Default";
+     }
+      
+      /**
+       * setName()
+       * sets the name of the warehouse
+       * @param warehouseName()
+       */
+      public void setName(String warehouseName) {
+    	  this.warehouseName = warehouseName;
+      }
+     
 
     /**getWarehouse()
      *

@@ -95,6 +95,10 @@ public class Controller implements Initializable{
     @FXML
     private TextField warehouseNameField;
 
+    /** Keeps Track of what warehouses exist
+     *  Observable ArrayList
+     */
+
     private static ArrayList<Warehouse> warehouseArrayList = new ArrayList<>();
     private static ObservableList<Warehouse> warehouseObservableList = FXCollections.observableList(warehouseArrayList);
 

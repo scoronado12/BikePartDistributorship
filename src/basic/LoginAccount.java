@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class LoginAccount extends Person {
 
-	protected ArrayList users = new ArrayList<LoginAccount>(); //database of users
+	protected static ArrayList users = new ArrayList<LoginAccount>(); //database of users
 	protected String username;
 	protected String password;
 	protected Person person;
@@ -39,9 +39,6 @@ public class LoginAccount extends Person {
 		users.add(user);
 		return users.size();
 	}
-
-	public LoginAccount verify(String username)
-
 	
 	/**
 	 * getUsername()
@@ -76,8 +73,10 @@ public class LoginAccount extends Person {
 	}
 
 	public static LoginAccount verify(String userName2, String password2) {
-		// TODO Auto-generated method stub
-		return null;
+		for(int i=0; i < users.size(); i++) {
+			
+		return LoginAccount;
+		}
 	}
 	
 }

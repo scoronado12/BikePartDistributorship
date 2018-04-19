@@ -35,12 +35,7 @@ public class Main extends Application {
 
     @Override
     public void stop() throws IOException {
-
-        System.out.println("Saving Warehouses");
-        Controller.doSaveOfWh();
-        System.out.println("Saving inventory.");
-        Controller.doSaveOfBp();
-        System.out.println("Goodbye!");
+        //primaryStage.close();
     }
 
 

@@ -40,6 +40,8 @@ public class LoginAccount extends Person {
 		return users.size();
 	}
 
+	public LoginAccount verify(String username)
+
 	
 	/**
 	 * getUsername()

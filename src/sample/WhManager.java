@@ -1,5 +1,7 @@
 package sample;
+import basic.BikePart;
 import basic.LoginAccount;
+import basic.Warehouse;
 
 public class WhManager extends LoginAccount {
 
@@ -43,7 +45,7 @@ public class WhManager extends LoginAccount {
      * toString - prints out the object instance as a String
      * @return
      */
-    public String toString() { return "Warehouse Manager: " +firstName + " " + lastName + " " + username; }
+    public String toString() { return "Warehouse Manager: " + firstName + " " + lastName + " " + username; }
 
 
 

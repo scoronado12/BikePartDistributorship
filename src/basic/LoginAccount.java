@@ -74,5 +74,10 @@ public class LoginAccount extends Person {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public static LoginAccount verify(String userName2, String password2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

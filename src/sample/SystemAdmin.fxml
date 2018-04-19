@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.SystemAdminController">
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="project3gui.SystemAdminController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="357.0000999999975" prefWidth="392.0000999999975" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -16,12 +16,11 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <TextField fx:id="textFieldInv" layoutX="118.0" layoutY="96.0" prefWidth="200.0" visible="false" />
                 <MenuButton id="menuInvMan" fx:id="AcctTypeMenu" layoutX="180.0" layoutY="23.0" mnemonicParsing="false" prefWidth="131.0001220703125" text="Select a Type">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#HandleFileMode" text="Office Manager" />
-                    <MenuItem mnemonicParsing="false" text="Sales Associate" />
-                    <MenuItem mnemonicParsing="false" onAction="#HandleManualMode" text="Warehouse Manager" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleOfficeMan" text="Office Manager" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleSalesAsso" text="Sales Associate" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleWareHouseMan" text="Warehouse Manager" />
                   </items>
                 </MenuButton>
                 <Text layoutX="100.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Type:" />
@@ -34,8 +33,8 @@
                 <TextField id="lastLabel" fx:id="lastTextField" layoutX="268.0" layoutY="59.0" prefWidth="111.0" />
                 <TextField id="firstNLabel" fx:id="firstTextField" layoutX="85.0" layoutY="59.0" prefWidth="111.0" />
                 <TextField fx:id="emailTextField" layoutX="85.0" layoutY="87.0" prefWidth="214.0" />
-                <TextField fx:id="userTextField" layoutX="85.0" layoutY="116.0" prefWidth="169.0" />
-                <TextField fx:id="passTextField" layoutX="85.0" layoutY="145.0" prefWidth="169.0" />
+                <TextField id="userTextField" fx:id="createUserTextField" layoutX="85.0" layoutY="116.0" prefWidth="169.0" />
+                <TextField id="passTextField" fx:id="createPassTextField" layoutX="85.0" layoutY="145.0" prefWidth="169.0" />
                 <Button fx:id="createButton" layoutX="145.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleCreateAccount" text="Create Account" />
                 <Label fx:id="wHManLabel" layoutX="22.0" layoutY="177.0" text="Warehouse:" visible="false" />
                 <TextField fx:id="wHSATextField" layoutX="85.0" layoutY="174.0" prefWidth="169.0" visible="false" />
@@ -50,19 +49,19 @@
               <children>
                 <MenuButton layoutX="134.0" layoutY="22.0" mnemonicParsing="false" text="Choose a Mode">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Reset Password" />
-                    <MenuItem mnemonicParsing="false" text="Delete Account" />
+                    <MenuItem mnemonicParsing="false" text="Reset Password" fx:id="HandleResetMode" />
+                    <MenuItem mnemonicParsing="false" text="Delete Account" fx:id="HandleDeleteMode" />
                   </items>
                 </MenuButton>
                 <Label id="rPassUserLabel" fx:id="UserLabel" layoutX="78.0" layoutY="68.0" prefWidth="55.000099999997474" text="Username:" />
                 <Label id="rPassPassLabel" fx:id="PassLabel" layoutX="81.0" layoutY="91.0" text="Password:" />
                 <Label id="rPassNewPassLabel" fx:id="rPassNewLabel" layoutX="54.0" layoutY="114.0" text="New Password:" visible="false" />
-                <TextField id="rPassUserTextField" fx:id="UserTextField" layoutX="134.0" layoutY="65.0" prefWidth="200.0" />
-                <TextField id="rPassPassTextField" fx:id="PassTextField" layoutX="134.0" layoutY="88.0" prefWidth="200.0" />
+                <TextField id="rPassUserTextField" fx:id="userTextField" layoutX="134.0" layoutY="65.0" prefWidth="200.0" />
+                <TextField id="rPassPassTextField" fx:id="passTextField" layoutX="134.0" layoutY="88.0" prefWidth="200.0" />
                 <TextField id="rPassNewPassTextField" fx:id="rPassNewTextField" layoutX="134.0" layoutY="111.0" prefWidth="200.0" visible="false" />
-                <Button fx:id="rPassButton" layoutX="140.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleResetPassword" text="Change Password" visible="false" />
+                <Button fx:id="rPassButton" layoutX="140.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleResetButton" text="Change Password" visible="false" />
                 <TextArea fx:id="manStatusTextArea" layoutX="97.0" layoutY="208.0" prefHeight="96.0" prefWidth="200.0" visible="false" wrapText="true" />
-                <Button id="rPassButton" fx:id="deleteAcctButton" layoutX="146.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleDeleteAccount" text="Delete Account" visible="false" />
+                <Button id="rPassButton" fx:id="deleteAcctButton" layoutX="146.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete Account" visible="false" />
                 <CheckBox fx:id="confDelCheckBox" layoutX="150.0" layoutY="126.0" mnemonicParsing="false" text="Are You Sure?" visible="false" />
               </children>
             </AnchorPane>

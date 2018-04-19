@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.WHManagerController">
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="project3gui.WHManagerController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="357.0000999999975" prefWidth="392.0000999999975" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -55,25 +55,17 @@
               <children>
                 <MenuButton fx:id="menuSSA" layoutX="143.0" layoutY="23.0" mnemonicParsing="false" text="Select Mode">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleSellAction" text="Alphabetical Search" fx:id="modeSell" />
-                    <MenuItem mnemonicParsing="false" onAction="#handleSearchAction" text="Numerical Search" fx:id="modeSearch" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleNameSearch" text="Alphabetical Search" fx:id="modeSell" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleNumSearch" text="Numerical Search" fx:id="modeSearch" />
                   </items>
                 </MenuButton>
-                <TextArea fx:id="textAreaSS" layoutX="14.0" layoutY="157.0" prefHeight="156.0" prefWidth="365.0" wrapText="true" />
-                <TextField fx:id="textSSTab" layoutX="138.0" layoutY="54.0" prefWidth="184.0" visible="true" />
-                <Label fx:id="labelSellMode" disable="false" layoutX="23.0" layoutY="57.0" text="Enter Part Number:" visible="false" />
-                <Label fx:id="labelSearchMode" layoutX="35.0" layoutY="57.0" text="Enter Part Name:" visible="true" />
-                <Button fx:id="buttonSearch" layoutX="169.0" layoutY="128.0" onAction="#handleSearchSellButtonAction" text="Search" visible="true" />
-                <Label fx:id="labelSSData" layoutX="91.0" layoutY="90.0" text="Choose Database:" visible="true" />
-                <ChoiceBox layoutX="194.0" layoutY="87.0" prefWidth="90.0">
-                  <items>
-                    <FXCollections fx:factory="observableArrayList">
-                      <String fx:value="Item 1" />
-                      <String fx:value="Item 2" />
-                      <String fx:value="Item 3" />
-                    </FXCollections>
-                  </items>
-                </ChoiceBox>
+                <TextArea id="textAreaSS" fx:id="searchTextArea" layoutX="14.0" layoutY="157.0" prefHeight="156.0" prefWidth="365.0" visible="false" wrapText="true" />
+                <TextField id="textSSTab" fx:id="searchTextField" layoutX="139.0" layoutY="54.0" prefWidth="184.0" visible="false" />
+                <Label id="labelSellMode" fx:id="searchNumLabel" disable="false" layoutX="23.0" layoutY="57.0" text="Enter Part Number:" visible="false" />
+                <Label id="labelSearchMode" fx:id="searchNameLabel" layoutX="35.0" layoutY="57.0" text="Enter Part Name:" visible="false" />
+                <Button fx:id="buttonSearch" layoutX="169.0" layoutY="128.0" onAction="#HandleSearchButton" text="Search" visible="false" />
+                <Label id="labelSSData" fx:id="yourWHLabel" layoutX="93.0" layoutY="90.0" text="Your Warehouse:" visible="false" />
+                <Label fx:id="yourWHLabel" layoutX="197.0" layoutY="90.0" text="Stand-in Text" visible="false" />
               </children>
             </AnchorPane>
           </content>
@@ -91,8 +83,8 @@
                   </items>
                 </MenuButton>
                 <Label layoutX="78.0" layoutY="83.0" text="Choose Sort Method:" />
-                <Label layoutX="20.0" layoutY="25.0" text="Your Home Database:" />
-                <Label layoutX="152.0" layoutY="25.0" prefWidth="145.0" text="Stand-In Text">
+                <Label layoutX="44.0" layoutY="25.0" text="Your Warehouse:" />
+                <Label fx:id="urWHLabel" layoutX="152.0" layoutY="25.0" prefWidth="165.0" text="Stand-In Text">
                   <font>
                     <Font size="15.0" />
                   </font>

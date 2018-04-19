@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.SalesAssociateController">
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="project3gui.SalesAssociateController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="423.0" prefWidth="444.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -18,7 +18,7 @@
                 <Label layoutX="67.0" layoutY="109.0" text="Inventory Movement File:" />
                 <TextArea fx:id="vanTextArea" layoutX="50.0" layoutY="213.0" prefHeight="165.0" prefWidth="345.0" wrapText="true" />
                 <Button fx:id="moveButton" layoutX="183.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleMoveInvButton" text="Add to Van" />
-                <TextField fx:id="moveTextArea" layoutX="202.0" layoutY="106.0" prefWidth="174.99993896484375" />
+                <TextField id="moveTextArea" fx:id="moveTextField" layoutX="202.0" layoutY="106.0" prefWidth="174.99993896484375" />
                 <Label layoutX="18.0" layoutY="22.0" text="Welcome">
                   <font>
                     <Font size="17.0" fx:id="x1" />
@@ -33,9 +33,9 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="457.0">
               <children>
-                <Label id="QuanLabel" fx:id="quanLabel" layoutX="161.0" layoutY="64.0" text="Quantity:" visible="false" />
-                <TextField fx:id="searchTextArea" layoutX="210.0" layoutY="39.0" prefWidth="192.0" visible="false" />
-                <TextField fx:id="quanTextArea" layoutX="210.0" layoutY="64.0" prefWidth="59.0" visible="false" />
+                <Label id="QuanLabel" fx:id="quanLabel" layoutX="335.0" layoutY="67.0" text="Qty:" visible="false" />
+                <TextField id="searchTextArea" fx:id="clientTextField" layoutX="166.0" layoutY="36.0" prefWidth="250.0" visible="false" />
+                <TextField id="quanTextArea" fx:id="quanTextField" layoutX="357.0" layoutY="64.0" prefWidth="59.0" visible="false" />
                 <Button fx:id="addPartButton" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleAddToSaleArrayAction" text="Add to Sale Invoice" />
                 <Button fx:id="completeButton" layoutX="172.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleCompleteSaleAction" prefHeight="28.0" prefWidth="100.0" text="Complete Sale">
                   <tooltip>
@@ -49,12 +49,13 @@
                     <Font size="14.0" fx:id="x2" />
                   </font>
                 </Label>
-                <Label id="salesAssoNameLabel" fx:id="nameLabel" layoutX="145.0" layoutY="42.0" text="Enter Name:" visible="false" />
-                <Label id="salesAssoNumLabel" fx:id="numLabel" layoutX="133.0" layoutY="42.0" text="Enter Number:" visible="false" />
+                <Label id="salesAssoNameLabel" fx:id="nameLabel" layoutX="145.0" layoutY="67.0" text="Enter Name:" visible="false" />
+                <Label id="salesAssoNumLabel" fx:id="numLabel" layoutX="133.0" layoutY="67.0" text="Enter Number:" visible="false" />
                 <RadioButton fx:id="nameRadio" layoutX="17.0" layoutY="42.0" mnemonicParsing="false" text="Part Name" />
                 <RadioButton fx:id="numberRadio" layoutX="17.0" layoutY="67.0" mnemonicParsing="false" text="Part Number" />
-                <Label id="salesAssoNameLabel" layoutX="156.0" layoutY="188.0" text="Enter Name:" visible="false" />
                 <Label fx:id="entPromptLabel" font="$x2" layoutX="152.0" layoutY="11.0" text="Enter Part Information:" visible="false" />
+                <TextField id="numNameLabel" fx:id="searchTextField" layoutX="210.0" layoutY="64.0" prefWidth="111.0" visible="false" />
+                <Label fx:id="clientLabel" layoutX="133.0" layoutY="39.0" text="Client:" visible="false" />
               </children>
             </AnchorPane>
           </content>

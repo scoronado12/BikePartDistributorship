@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="salesassociate.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.SalesAssociateController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="423.0" prefWidth="444.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>

@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 
 <<<<<<< HEAD
-<AnchorPane prefHeight="533.0" prefWidth="477.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.LoginWindow">
+<AnchorPane prefHeight="533.0" prefWidth="477.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.LoginController">
   <children>
     <ImageView fx:id="image" fitHeight="201.0" fitWidth="302.0" layoutX="86.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
       <image>

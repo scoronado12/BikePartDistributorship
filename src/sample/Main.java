@@ -1,5 +1,6 @@
 package sample;
 
+import deprecated.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,11 +17,12 @@ public class Main extends Application {
      * @param primaryStage - the Window
      * @throws Exception
      */
-	//mitchell testing
+    
+    //Main is to start a login window
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("project2gui.fxml"));
-        primaryStage.setTitle("Bicycle Parts Distributorship - by Stefano Coronado");
+        Parent root = FXMLLoader.load(getClass().getResource("LoginWindow.fxml"));
+        primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root, 775, 510));
         primaryStage.show();
         primaryStage.setOnCloseRequest(event -> System.out.println("Stage is closing")); //added in later on to handle saving and exiting

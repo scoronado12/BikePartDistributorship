@@ -72,7 +72,7 @@ public class LoginController implements Initializable{
 
             Parent homePageParent = FXMLLoader.load(getClass().getResource("SalesAssociate.fxml"));
             Scene homePageScene = new Scene(homePageParent);
-            Stage projectStage = (Stage) ((NodThank you.e) event.getSource()).getScene().getWindow();
+            Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             projectStage.setScene(homePageScene);
             projectStage.show();
 

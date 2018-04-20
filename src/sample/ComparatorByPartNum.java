@@ -16,6 +16,8 @@ public class ComparatorByPartNum implements Comparator<BikePart> {
     @Override
     public int compare(BikePart o1, BikePart o2) {
         //syntax fetched from https://stackoverflow.com/questions/2839137/how-to-use-comparator-in-java-to-sort
-        return o1.getPartNumber() < o2.getPartNumber() ? -1 : o1.getPartNumber() == o2.getPartNumber() ? 0 : 1;
+        //return o1.getPartNumber() < o2.getPartNumber() ? -1 : o1.getPartNumber() == o2.getPartNumber() ? 0 : 1;
+
+        return Integer.compare(o1.getPartNumber(), o2.getPartNumber());
     }
 }

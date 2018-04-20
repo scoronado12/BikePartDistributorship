@@ -2,6 +2,10 @@ package sample;
 import basic.BikePart;
 import basic.LoginAccount;
 import basic.Warehouse;
+import basic.fileActions;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class WhManager extends LoginAccount {
 
@@ -22,7 +26,7 @@ public class WhManager extends LoginAccount {
  * @param password ; password for account
  * @param firstName ; user's first name
  * @param lastName ; user's last name
- * @param warehouseName ; name of the warehouse user is manageing
+ * @param warehouseName ; name of the warehouse user is managing
  */
     public WhManager(String username, String password, String firstName, String lastName, String warehouseName) {
         super(username, password, firstName, lastName);
@@ -61,7 +65,16 @@ public class WhManager extends LoginAccount {
 
     }
     //needs to take in a text file
-    public void updateInventory(){
+    public void updateInventory(String fileName) throws FileNotFoundException {
+
+        /*Is this what you want?
+         * - Stefano
+         */
+
+
+        ArrayList parts = (ArrayList) fileActions.readWhDB(fileName);
+
+
 
     }
 

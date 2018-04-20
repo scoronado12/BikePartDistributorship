@@ -33,23 +33,32 @@ public class WhManager extends LoginAccount {
     	wh.printAll();
     }
     //needs to take in a text file
-    public void transferInventory(Warehouse source, Warehouse destinationWh, BikePart bp, int quantityToMove){
+    public void transferInventory(Warehouse source, Warehouse destination, BikePart bp, int quantityToMove){
 
         //if (source.findBp(bp.getPartNumber()) == bp ){ //if found in source
         if (source.BikePartList.contains(bp)){
             //then remove that amount
-
-
-
-
-
-
-
+            System.out.println("Removing " + quantityToMove + " from " + source.toString());
+            source.bp.setQuantity(source.bp.getQuantity() - quantityToMove);
         } else {
             System.out.println("BikePart does not exist in " + source.toString());
         }
 
-    	
+        if (destination.BikePartList.contains(bp)){
+
+            destination.bp.setQuantity(destination.bp.getQuantity() + quantityToMove);
+
+
+
+        } else {
+            System.out.println(bp.toString() + " not found in " + destination.toString());
+            destination.add(bp); // add into destination wh
+            destination.bp.setQuantity(quantityToMove); //change the value
+        }
+
+
+
+
     }
     //needs to take in a text file
     public void updateInventory(){

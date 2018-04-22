@@ -2,6 +2,9 @@ package sample;
 import basic.LoginAccount;
 import basic.BikePart;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 /**
  * OfficeManager class
@@ -53,6 +56,9 @@ public class OfficeManager extends LoginAccount {
 			bpal.add(si.get(i).getPartSold());
 		}
 		toOrder = bpal;
+		writeToFile(toOrder);
+		clearToOrder();
+		
 	}
 	
 	public ArrayList<BikePart> getOrder(){
@@ -61,6 +67,28 @@ public class OfficeManager extends LoginAccount {
 	
 	public void clearToOrder() {
 		toOrder.clear();
+	}
+	
+	public void writeToFile(ArrayList<BikePart> bp)
+	{
+		PrintWriter out = null;
+		try {
+    		out = new PrintWriter(new FileWriter("orderedParts.txt"));
+    		for(int i = 0; i < bp.size(); i++)
+    		{
+    		out.println(bp.get(i));
+    		}
+    		
+        	}
+        catch (IndexOutOfBoundsException e) 
+    		{
+            	System.err.println("IndexOutOfBoundsException: " + e.getMessage());
+    		} 
+    	catch (IOException e) 
+    		{
+            	System.err.println("Caught IOException: " + e.getMessage());
+    		}
+    	out.close();
 	}
 
 }

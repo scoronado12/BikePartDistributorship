@@ -30,8 +30,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("LoginWindow.fxml"));
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 775, 510));
+        primaryStage.setTitle("Bicycle Part Distributorship");
+        primaryStage.setScene(new Scene(root, 475, 510));
         primaryStage.show();
         primaryStage.setOnCloseRequest(event -> System.out.println("Stage is closing")); //added in later on to handle saving and exiting
     }
@@ -58,6 +58,11 @@ public class Main extends Application {
         //Sysadmin Stefano
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");
         LoginAccount.users.add(SysAdminStefano);
+
+        //Office manager gusty
+
+        OfficeManager gusty = new OfficeManager("gcooper", "bicycle", "Gusty", "Cooper");
+        LoginAccount.users.add(gusty);
 
 
         launch(args);

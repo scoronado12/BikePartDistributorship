@@ -84,7 +84,7 @@ public class LoginController implements Initializable{
         }
         else if (la instanceof SysAdmin){
             System.out.println("Logging in " + userName + " as SysAdmin");
-            Parent homePageParent = FXMLLoader.load(getClass().getResource("SysAdmin.fxml"));
+            Parent homePageParent = FXMLLoader.load(getClass().getResource("SystemAdmin.fxml"));
             Scene homePageScene = new Scene(homePageParent);
             Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             projectStage.setScene(homePageScene);

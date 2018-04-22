@@ -176,7 +176,7 @@
                   </items>
                 </MenuButton>
                 <TextArea id="textAreaSS" fx:id="searchTextArea" layoutX="14.0" layoutY="157.0" prefHeight="156.0" prefWidth="365.0" visible="false" wrapText="true" />
-                <TextField id="textSSTab" fx:id="findPartTextField" layoutX="138.0" layoutY="54.0" prefWidth="184.0" visible="false" />
+                <TextField id="textSSTab" fx:id="searchTextField" layoutX="138.0" layoutY="54.0" prefWidth="184.0" visible="false" />
                 <Label id="labelSellMode" fx:id="partNumLabel" disable="false" layoutX="23.0" layoutY="57.0" text="Enter Part Number:" visible="false" />
                 <Label id="labelSearchMode" fx:id="partNameLabel" layoutX="35.0" layoutY="57.0" text="Enter Part Name:" visible="false" />
                 <Button fx:id="buttonSearch" layoutX="169.0" layoutY="128.0" onAction="#HandleSearchButtonAction" text="Search" visible="false" />

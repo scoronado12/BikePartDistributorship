@@ -69,7 +69,7 @@ public class OfficeManagerController implements Initializable {
     @FXML
     private TextArea searchTextArea;
     @FXML
-    private TextField findPartTextField;
+    private TextField searchTextField;
     @FXML
     private Label partNumLabel;
     @FXML
@@ -101,14 +101,39 @@ public class OfficeManagerController implements Initializable {
 
     @FXML
     private void HandleGeneratePaycheck(ActionEvent event) {
+    	String salesAsso = salesAssoTextField.getText();
     }
 
     @FXML
     private void HandleNameSearch(ActionEvent event) {
-    }
+    	partNumLabel.setVisible(false);
+    	menuSSA.setText("Alphabetical");
+    	
+    	searchTextArea.setVisible(true);
+    	searchTextField.setVisible(true);
+    	partNameLabel.setVisible(true);
+    	buttonSearch.setVisible(true);
+    	databaseLabel.setVisible(true);
+    	warehousesComboBox.setVisible(true);
+    	
+    	
+    	//TODO Combo Box population - fill with warehouses
+    	}
 
     @FXML
     private void HandleNumSearch(ActionEvent event) {
+    	partNameLabel.setVisible(false);
+    	menuSSA.setText("Numerical Search");
+    	
+    	searchTextArea.setVisible(true);
+    	searchTextField.setVisible(true);
+    	partNumLabel.setVisible(true);
+    	buttonSearch.setVisible(true);
+    	databaseLabel.setVisible(true);
+    	warehousesComboBox.setVisible(true);
+    	
+    	
+    	//TODO Combo Box population - fill with warehouses
     }
 
     @FXML

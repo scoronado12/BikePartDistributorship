@@ -1,5 +1,7 @@
 package sample;
 
+import basic.LoginAccount;
+import basic.Warehouse;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,9 +9,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class Main extends Application {
+
+    /** WarehouseDB
+     *  Keeps track of Warehouses
+     */
+
+    ArrayList warehouseArrayList = new ArrayList<Warehouse>();
 
     /**
      * Start(Stage primaryStage) - Gives the JavaFX Window certain properties
@@ -39,6 +48,10 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+        SysAdmin SysadminStefano = new SysAdmin("scoronado", "pass", "Stefano", "Coronado");
+        LoginAccount.users.add(SysadminStefano);
+
+
         launch(args);
     }
 }

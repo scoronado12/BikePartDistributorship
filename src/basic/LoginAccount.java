@@ -1,13 +1,8 @@
 package basic;
 
-import sample.SysAdmin;
-
 import java.util.ArrayList;
 
 /**
-=======
-
-/* branch 'master' of https://github.com/scoronado12/BikePartDistributorship
  * A simple login account with a username and password, as well as a name and email
  * @author Mitchell Bisson
  *

@@ -46,6 +46,11 @@ public class Main extends Application {
         //primaryStage.close();
     }
 
+    /** main() - Establishes some predefined users to get started
+     *
+     * @param args
+     */
+
 
     public static void main(String[] args) {
         //John the sales associate
@@ -55,12 +60,12 @@ public class Main extends Application {
 
         WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");
         LoginAccount.users.add(WManMitchell);
+
         //Sysadmin Stefano
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");
         LoginAccount.users.add(SysAdminStefano);
 
         //Office manager gusty
-
         OfficeManager gusty = new OfficeManager("gcooper", "bicycle", "Gusty", "Cooper");
         LoginAccount.users.add(gusty);
 

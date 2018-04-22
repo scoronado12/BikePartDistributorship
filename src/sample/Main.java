@@ -50,11 +50,11 @@ public class Main extends Application {
     public static void main(String[] args) {
         //John the sales associate
         SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans");
-        LoginAccount.users.add(tripEvans);
-
-        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson");
+        LoginAccount.users.add(saTripp);
+        //Mitchell the Warehouse Manager with MitchellWarehouse
+        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson", "MitchellWh");
         LoginAccount.users.add(WManMitchell);
-
+        //Sysadmin Stefano
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");
         LoginAccount.users.add(SysAdminStefano);
 

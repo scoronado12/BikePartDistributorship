@@ -48,8 +48,15 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        SysAdmin SysadminStefano = new SysAdmin("scoronado", "pass", "Stefano", "Coronado");
-        LoginAccount.users.add(SysadminStefano);
+        //John the sales associate
+        SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans");
+        LoginAccount.users.add(tripEvans);
+
+        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson");
+        LoginAccount.users.add(WManMitchell);
+
+        SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");
+        LoginAccount.users.add(SysAdminStefano);
 
 
         launch(args);

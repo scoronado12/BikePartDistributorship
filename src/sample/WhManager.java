@@ -39,7 +39,7 @@ public class WhManager extends LoginAccount {
     public void displayInventory(){
     	wh.printAll();
     }
-    //needs to take in a text file
+    
     public void transferInventory(Warehouse source, Warehouse destination, BikePart bp, int quantityToMove){
 
         //if (source.findBp(bp.getPartNumber()) == bp ){ //if found in source

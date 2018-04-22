@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class LoginAccount extends Person {
 
-	protected static ArrayList users = new ArrayList<LoginAccount>(); //database of users
+	protected static ArrayList<LoginAccount> users = new ArrayList<LoginAccount>(); //database of users
 	protected String username;
 	protected String password;
 	protected Person person;
@@ -73,10 +73,24 @@ public class LoginAccount extends Person {
 	}
 
 	public static LoginAccount verify(String userName2, String password2) {
+		LoginAccount verified = new LoginAccount("user","pass","first","last");
+		boolean isNotFound = true;
+		if(users.isEmpty()) {
+			return null;
+		}
 		for(int i=0; i < users.size(); i++) {
-			
-		return LoginAccount;
+			if(userName2.equals(users.get(i).getUsername()) && password2.equals(users.get(i).getPassword())) {
+				verified = users.get(i);
+				isNotFound = false;
+			}
+		}
+		if(isNotFound) {
+			return null;
+		}
+		else {	
+		return verified;
+		}
 		}
 	}
 	
-}
+

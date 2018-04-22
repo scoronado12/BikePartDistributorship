@@ -51,8 +51,9 @@ public class Main extends Application {
         //John the sales associate
         SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans");
         LoginAccount.users.add(saTripp);
-        //Mitchell the Warehouse Manager with MitchellWarehouse
-        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson", "MitchellWh");
+
+
+        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");
         LoginAccount.users.add(WManMitchell);
         //Sysadmin Stefano
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");

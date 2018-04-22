@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.SalesAssociateController">
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesAssociateController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="423.0" prefWidth="444.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -42,7 +46,7 @@
                     <Tooltip text="Warning: Be sure to enter all sold parts before proceeding with the sale." />
                   </tooltip>
                 </Button>
-                <TextArea fx:id="addPartTextArea" layoutX="152.0" layoutY="108.0" prefHeight="38.0" prefWidth="264.0" wrapText="true" />
+                <TextArea fx:id="addPartTextArea" layoutX="152.0" layoutY="111.0" prefHeight="38.0" prefWidth="264.0" wrapText="true" />
                 <TextArea fx:id="invoiceTextArea" layoutX="14.0" layoutY="207.0" prefHeight="171.0" prefWidth="416.0" text="" wrapText="true" />
                 <Label layoutX="17.0" layoutY="11.0" minHeight="16.0" prefHeight="19.0" prefWidth="49.000099999997474" text="Find By:">
                   <font>

@@ -92,6 +92,8 @@ public class WHManagerController implements Initializable {
     @FXML
     private Label yourWHLabel;
     @FXML
+    private Label WHLabel;
+    @FXML
     private TextArea textAreaSort;
     @FXML
     private Button sortButton;
@@ -126,7 +128,7 @@ public class WHManagerController implements Initializable {
         labelSale.setVisible(false);
         labelQuan.setVisible(false);
         buttonMan.setVisible(false);
-        radioSale.setVisible(false);
+        onSaleCheckBox.setVisible(false);
       
         radioNewInv.setVisible(true);
         radioUpdate.setVisible(true);
@@ -137,26 +139,100 @@ public class WHManagerController implements Initializable {
 
     @FXML
     private void HandleManualMode(ActionEvent event) {
+        menuInvMan.setText("Manual Input");
+        radioNewInv.setVisible(false);
+        radioUpdate.setVisible(false);
+        labelFilename.setVisible(false);
+        textFieldInv.setVisible(false);
+        buttonFileAdd.setVisible(false); 
+        
+        tfName.setVisible(true);
+        tfPartNo.setVisible(true);
+        tfPrice.setVisible(true);
+        tfSale.setVisible(true);
+        tfQuan.setVisible(true);
+        labelName.setVisible(true);
+        labelNo.setVisible(true);
+        labelPrice.setVisible(true);
+        labelSale.setVisible(true);
+        labelQuan.setVisible(true);
+        buttonMan.setVisible(true);
+        onSaleCheckBox.setVisible(true);
     }
 
     @FXML
     private void HandleAddButton(ActionEvent event) {
+        if (radioNewInv.isSelected() == true) {
+            String newFile = textFieldInv.getText();
+            Project2BikePart.readInventory(newFile);
+            textAreaInv.appendText("Inventory Added\n");
+        }
+        else if (radioUpdate.isSelected() == true) {
+            String update = textFieldInv.getText();
+            Project2BikePart.moveInventory(update);
+            textAreaInv.appendText("Inventory Updated\n");       
+        }
     }
 
     @FXML
     private void HandleManualButton(ActionEvent event) {
+        boolean onSale = false;
+        if (tfName.getText().isEmpty() == false &&
+                tfPartNo.getText().isEmpty() == false &&
+                tfPrice.getText().isEmpty() == false &&
+                tfSale.getText().isEmpty() == false &&
+                tfQuan.getText().isEmpty() == false) {
+            String name = tfName.getText();
+            int number = Integer.parseInt(tfPartNo.getText());
+            double price = Double.parseDouble(tfPrice.getText());
+            double sale = Double.parseDouble(tfSale.getText());
+            int quant = Integer.parseInt(tfQuan.getText());
+            onSale = onSaleCheckBox.isSelected();
+            Project2BikePart.manualEnter(name, number, price, sale, onSale, quant);
+            textAreaInv.appendText("Part has been added to your warehouse\n");
+        }
+        else {
+            textAreaInv.appendText("Please be sure to fill all fields.\n");
+        }
     }
 
     @FXML
     private void HandleNameSearch(ActionEvent event) {
+    	searchNumLabel.setVisible(false);
+    	menuSSA.setText("Alphabetical Search");
+    	
+    	searchTextArea.setVisible(true);
+    	searchTextField.setVisible(true);
+    	searchNameLabel.setVisible(true);
+    	buttonSearch.setVisible(true);
+    	yourWHLabel.setVisible(true);
+    	
+    	WHLabel.setText(/*WarehouseMan warehouse*/);
+    	WHLabel.setVisible(true);
     }
 
     @FXML
     private void HandleNumSearch(ActionEvent event) {
+    	searchNameLabel.setVisible(false);
+    	menuSSA.setText("Numerical Search");
+    	
+    	searchTextArea.setVisible(true);
+    	searchTextField.setVisible(true);
+    	searchNumLabel.setVisible(true);
+    	buttonSearch.setVisible(true);
+    	yourWHLabel.setVisible(true);
+    	
+    	WHLabel.setText(/*WarehouseMan warehouse*/);
+    	WHLabel.setVisible(true);
     }
 
     @FXML
     private void HandleSearchButton(ActionEvent event) {
+    	if (searchNumLabel.isVisible() == true) {
+    		int targetID = Integer.parseInt(searchTextField.getText()); 
+    	}
+    	else if (searchNameLabel.isVisible() == true) {
+    		String targetName = searchTextField.getText(); 
     }
 
     @FXML

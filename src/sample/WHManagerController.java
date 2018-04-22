@@ -237,7 +237,7 @@ public class WHManagerController implements Initializable {
 
     @FXML
     private void HandleSortButton(ActionEvent event) {
-    	//sort Stuff
+    	//sort Stuff again
     }
 
     @FXML

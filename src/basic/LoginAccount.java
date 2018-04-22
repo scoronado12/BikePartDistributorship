@@ -1,5 +1,7 @@
 package basic;
 
+import sample.SysAdmin;
+
 import java.util.ArrayList;
 
 /**
@@ -12,7 +14,9 @@ import java.util.ArrayList;
  */
 public class LoginAccount extends Person {
 
-	protected static ArrayList<LoginAccount> users = new ArrayList<LoginAccount>(); //database of users
+
+
+	public static ArrayList<LoginAccount> users = new ArrayList<LoginAccount>(); //database of users
 	protected String username;
 	protected String password;
 	protected Person person;

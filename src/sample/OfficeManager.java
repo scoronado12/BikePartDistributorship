@@ -71,6 +71,7 @@ public class OfficeManager extends LoginAccount {
 		return toOrder;
 	}
 	/**
+	 * 
 	 * clearToOrder() clears the array list holding the parts that need to be ordered
 	 */
 	public void clearToOrder() {

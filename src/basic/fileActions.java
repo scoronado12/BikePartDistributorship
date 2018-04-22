@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import deprecated.Controller;
+//import deprecated.Controller;
 
 
 /**
@@ -152,7 +152,7 @@ public class fileActions {
      */
 
 
-    public static void readForTransfer(String fileName) {
+    /*public static void readForTransfer(String fileName) {
 
         String sourceDest = "";
         String itemAmount = "";
@@ -188,7 +188,7 @@ public class fileActions {
             }
         }
 
-    }
+    }*/
 
 
 

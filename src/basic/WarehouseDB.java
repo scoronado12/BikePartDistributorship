@@ -13,14 +13,14 @@ public class WarehouseDB {
     /** ArrayList of Warehouses to keep track of
      *
      */
-    private ArrayList warehouses = new ArrayList<Warehouse>();
+    private ArrayList<Warehouse> warehouses = new ArrayList<Warehouse>();
     private Warehouse wh;
 
     /**WarehouseDB
      * Defines what a warehouse should look like
      * @param warehouses ;
      */
-    public WarehouseDB(ArrayList warehouses){
+    public WarehouseDB(ArrayList<Warehouse> warehouses){
         this.warehouses = warehouses;
     }
 
@@ -34,7 +34,7 @@ public class WarehouseDB {
     }
 
     public void remove(Warehouse wh){
-        warehouses.remove(wh)
+        warehouses.remove(wh);
     }
 
     public Warehouse getWh(){

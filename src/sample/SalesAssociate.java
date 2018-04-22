@@ -34,7 +34,7 @@ public class SalesAssociate extends LoginAccount {
     	SalesInvoice newSale = new SalesInvoice(customerName, associateName, partSold, quantitySold);
     	totalSales.add(newSale);
     }
-    //needs to return a text file to be read
+    
     public ArrayList<SalesInvoice> getTotalSales(){
     	return totalSales;
     }

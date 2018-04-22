@@ -4,8 +4,10 @@ import basic.LoginAccount;
 import basic.Warehouse;
 import basic.fileActions;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class WhManager extends LoginAccount {
 
@@ -20,6 +22,7 @@ public class WhManager extends LoginAccount {
      * @param Warehouse; The maintained warehouse of the user
      */
     protected Warehouse wh = new Warehouse();
+	private Scanner read;
 /**
  * WhManager Object
  * @param username ; username for account
@@ -36,7 +39,7 @@ public class WhManager extends LoginAccount {
     public void displayInventory(){
     	wh.printAll();
     }
-    //needs to take in a text file
+    
     public void transferInventory(Warehouse source, Warehouse destination, BikePart bp, int quantityToMove){
 
         //if (source.findBp(bp.getPartNumber()) == bp ){ //if found in source
@@ -69,14 +72,51 @@ public class WhManager extends LoginAccount {
 
         /*Is this what you want?
          * - Stefano
+         * 
+         * Yes
+         * -Mitchell
          */
+        File file = new File(fileName);
+        read = new Scanner(file);
+        
+        while(read.hasNextLine()) {
+        	try 
+    		{        
+    			read = new Scanner(file);
+    			while (read.hasNextLine()) 
+    			{            
+    				String line = read.nextLine();
+    				String regExp = "\\s*(\\s|,)\\s*";
+    				String[] splits = line.split(regExp);
+    				
+    				String partName = splits[0];
+    				int partNum = Integer.parseInt(splits[1]);
+    				double partPrice = Double.parseDouble(splits[2]);
+    				double salesPrice = Double.parseDouble(splits[3]);
+    				boolean isSale = Boolean.parseBoolean(splits[4]);
+    				int quantity = Integer.parseInt(splits[5]);
+    				
+    				BikePart bp = new BikePart(partName,partNum,partPrice,salesPrice,isSale,quantity);
+    				wh.smartAdd(bp);
+    				
+    				
+    				
+    				}
+    			}    
+    		catch (FileNotFoundException e) 
+    		{        
+    			e.printStackTrace();
+    			}
+    		
+    		}
+        
+        }
+        
+        
 
 
-        ArrayList parts = (ArrayList) fileActions.readWhDB(fileName);
 
 
-
-    }
 
     /**
      * toString - prints out the object instance as a String

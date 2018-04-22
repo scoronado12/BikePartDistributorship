@@ -180,6 +180,26 @@ public class Warehouse{
 
         return BikePartList.size();
     }
+    
+    /**
+     * smartAdd(bp) checks to see if there is already a part with the name, if there is, replaces it.
+     * @param bp BikePart entered
+     */
+    public void smartAdd(BikePart bp) {
+    	int loc = -1;
+    	for(int i = 0; i < BikePartList.size(); i++) {
+    		if(BikePartList.get(i).getPartName().equals(bp.getPartName())) {
+    			loc = i;
+    		}
+    	}
+    	if(loc != -1) {
+    		BikePartList.add(bp);
+    	}
+    	else {
+    		BikePartList.remove(loc);
+    		BikePartList.add(loc,bp);
+    	}
+    }
 
 
     /**

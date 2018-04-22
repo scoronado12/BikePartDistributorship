@@ -76,9 +76,6 @@ public class WhManager extends LoginAccount {
          * Yes
          * -Mitchell
          */
-
-
-        ArrayList<BikePart> parts = new ArrayList<BikePart>();
         File file = new File(fileName);
         read = new Scanner(file);
         
@@ -100,23 +97,19 @@ public class WhManager extends LoginAccount {
     				int quantity = Integer.parseInt(splits[5]);
     				
     				BikePart bp = new BikePart(partName,partNum,partPrice,salesPrice,isSale,quantity);
-    				parts.add(bp);
+    				wh.smartAdd(bp);
     				
     				
     				
     				}
-    			System.out.println("File Read");
     			}    
     		catch (FileNotFoundException e) 
     		{        
-    			System.out.println("File not found");
     			e.printStackTrace();
     			}
     		
     		}
         
-        //update the warehouse's array list
-        for(int i = 0; i < wh.)
         }
         
         

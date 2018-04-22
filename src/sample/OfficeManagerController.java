@@ -91,10 +91,13 @@ public class OfficeManagerController implements Initializable {
 
     @FXML
     private void HandleCheckStockButton(ActionEvent event) {
+    	int minStock = Integer.parseInt(findUnitsTextField.getText());
     }
 
     @FXML
     private void HandleSearchInvoicesButton(ActionEvent event) {
+    	String client = clientNameTextField.getText();
+    	String 
     }
 
     @FXML

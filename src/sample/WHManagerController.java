@@ -114,6 +114,25 @@ public class WHManagerController implements Initializable {
 
     @FXML
     private void HandleFileMode(ActionEvent event) {
+        menuInvMan.setText("Inventory File");
+        tfName.setVisible(false);
+        tfPartNo.setVisible(false);
+        tfPrice.setVisible(false);
+        tfSale.setVisible(false);
+        tfQuan.setVisible(false);
+        labelName.setVisible(false);
+        labelNo.setVisible(false);
+        labelPrice.setVisible(false);
+        labelSale.setVisible(false);
+        labelQuan.setVisible(false);
+        buttonMan.setVisible(false);
+        radioSale.setVisible(false);
+      
+        radioNewInv.setVisible(true);
+        radioUpdate.setVisible(true);
+        labelFilename.setVisible(true);
+        textFieldInv.setVisible(true);
+        buttonFileAdd.setVisible(true);
     }
 
     @FXML

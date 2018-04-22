@@ -107,7 +107,7 @@ public class OfficeManagerController implements Initializable {
     @FXML
     private void HandleNameSearch(ActionEvent event) {
     	partNumLabel.setVisible(false);
-    	menuSSA.setText("Alphabetical");
+    	menuSSA.setText("Alphabetical Search");
     	
     	searchTextArea.setVisible(true);
     	searchTextField.setVisible(true);
@@ -138,6 +138,12 @@ public class OfficeManagerController implements Initializable {
 
     @FXML
     private void HandleSearchButtonAction(ActionEvent event) {
+    	if (partNumLabel.isVisible() == true) {
+    		int targetID = Integer.parseInt(searchTextField.getText()); 
+    	}
+    	else if (partNameLabel.isVisible() == true) {
+    		String targetName = searchTextField.getText(); 
+    	}
     }
 
     @FXML

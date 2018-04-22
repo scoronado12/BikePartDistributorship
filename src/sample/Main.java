@@ -50,9 +50,9 @@ public class Main extends Application {
     public static void main(String[] args) {
         //John the sales associate
         SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans");
-        LoginAccount.users.add(tripEvans);
+        LoginAccount.users.add(saTripp);
 
-        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson");
+        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");
         LoginAccount.users.add(WManMitchell);
 
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");

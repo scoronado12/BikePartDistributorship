@@ -49,7 +49,10 @@ public class OfficeManager extends LoginAccount {
 		sa.resetSales();
 		return totalPaycheck;
 	}
-	//need to change so it gives a file of what needs to be ordered
+	/**
+	 * orders the parts needed by generating a file and clearing the ordered list.
+	 * @param si
+	 */
 	public void orderParts(ArrayList<SalesInvoice> si){
 		ArrayList<BikePart> bpal = new ArrayList<BikePart>();
 		for(int i = 0; i < si.size(); i++) {
@@ -60,20 +63,28 @@ public class OfficeManager extends LoginAccount {
 		clearToOrder();
 		
 	}
-	
+	/**
+	 * getOrder() returns the parts that need to be ordered
+	 * @return
+	 */
 	public ArrayList<BikePart> getOrder(){
 		return toOrder;
 	}
-	
+	/**
+	 * clearToOrder() clears the array list holding the parts that need to be ordered
+	 */
 	public void clearToOrder() {
 		toOrder.clear();
 	}
-	
+	/**
+	 * writeToFile(bp) write the parts that need to be ordered to a file.
+	 * @param bp
+	 */
 	public void writeToFile(ArrayList<BikePart> bp)
 	{
 		PrintWriter out = null;
 		try {
-    		out = new PrintWriter(new FileWriter("orderedParts.txt"));
+    		out = new PrintWriter(new FileWriter(firstName+lastName+"orderedParts.txt"));
     		for(int i = 0; i < bp.size(); i++)
     		{
     		out.println(bp.get(i));

@@ -164,12 +164,12 @@ public class WHManagerController implements Initializable {
     private void HandleAddButton(ActionEvent event) {
         if (radioNewInv.isSelected() == true) {
             String newFile = textFieldInv.getText();
-            Project2BikePart.readInventory(newFile);
+            //Project2BikePart.readInventory(newFile);
             textAreaInv.appendText("Inventory Added\n");
         }
         else if (radioUpdate.isSelected() == true) {
             String update = textFieldInv.getText();
-            Project2BikePart.moveInventory(update);
+            //Project2BikePart.moveInventory(update);
             textAreaInv.appendText("Inventory Updated\n");       
         }
     }
@@ -188,7 +188,7 @@ public class WHManagerController implements Initializable {
             double sale = Double.parseDouble(tfSale.getText());
             int quant = Integer.parseInt(tfQuan.getText());
             onSale = onSaleCheckBox.isSelected();
-            Project2BikePart.manualEnter(name, number, price, sale, onSale, quant);
+            //Project2BikePart.manualEnter(name, number, price, sale, onSale, quant);
             textAreaInv.appendText("Part has been added to your warehouse\n");
         }
         else {
@@ -207,7 +207,7 @@ public class WHManagerController implements Initializable {
     	buttonSearch.setVisible(true);
     	yourWHLabel.setVisible(true);
     	
-    	WHLabel.setText(/*WarehouseMan warehouse*/);
+    	//WHLabel.setText(/*WarehouseMan warehouse*/);
     	WHLabel.setVisible(true);
     }
 
@@ -222,17 +222,17 @@ public class WHManagerController implements Initializable {
     	buttonSearch.setVisible(true);
     	yourWHLabel.setVisible(true);
     	
-    	WHLabel.setText(/*WarehouseMan warehouse*/);
+    	//WHLabel.setText(/*WarehouseMan warehouse*/);
     	WHLabel.setVisible(true);
     }
 
     @FXML
     private void HandleSearchButton(ActionEvent event) {
-    	if (searchNumLabel.isVisible() == true) {
-    		int targetID = Integer.parseInt(searchTextField.getText()); 
-    	}
-    	else if (searchNameLabel.isVisible() == true) {
-    		String targetName = searchTextField.getText(); 
+        if (searchNumLabel.isVisible() == true) {
+            int targetID = Integer.parseInt(searchTextField.getText());
+        } else if (searchNameLabel.isVisible() == true) {
+            String targetName = searchTextField.getText();
+        }
     }
 
     @FXML

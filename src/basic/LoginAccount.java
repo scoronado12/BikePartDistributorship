@@ -71,7 +71,14 @@ public class LoginAccount extends Person {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
+	/**
+	 * verify
+	 * checks to see if there the username and password entered is a valid combination
+	 * @param userName2
+	 * @param password2
+	 * @return LoginAccout || null
+	 */
 	public static LoginAccount verify(String userName2, String password2) {
 		LoginAccount verified = new LoginAccount("user","pass","first","last");
 		boolean isNotFound = true;

@@ -42,6 +42,10 @@ public class LoginAccount extends Person {
 		return users.size();
 	}
 	
+	public static ArrayList<LoginAccount> getUsers(){
+		return users;
+	}
+	
 	/**
 	 * getUsername()
 	 * @return username

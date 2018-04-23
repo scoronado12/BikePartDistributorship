@@ -8,6 +8,7 @@ import basic.BikePart;
 public class SalesAssociate extends LoginAccount {
 	
 	protected static Warehouse wh = new Warehouse();
+	protected static String salesVan;
 	
     /**
      * SalesAssociate Constructor
@@ -23,6 +24,7 @@ public class SalesAssociate extends LoginAccount {
 	
     public SalesAssociate(String username, String password, String firstName, String lastName, String salesVan) {
         super(username, password, firstName, lastName);
+        this.salesVan = salesVan;
         wh.setName(salesVan);
         
     }

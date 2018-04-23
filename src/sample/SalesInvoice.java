@@ -125,7 +125,7 @@ public class SalesInvoice {
 	}
 	
 	public String toString() {
-		return "The customer's name was " + customerName +".  The employee who sold the part's name was " + employeeName + ".  The transaction took place at " + dateFormat.format(time) +".  There were " + totalQuantity + " " + partSold.getPartName() + "s sold.  The total cost of this transaction was $" + totalCost + ".";
+		return "The customer's name was " + customerName +". \n The employee who sold the part's name was " + employeeName + ".  \nThe transaction took place at " + dateFormat.format(time) +".  \nThere were " + totalQuantity + " " + partSold.getPartName() + "s sold.  \nThe total cost of this transaction was $" + totalCost + ".";
 	}
 
 }

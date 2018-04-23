@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.collections.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.SystemAdminController">
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SystemAdminController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="357.0000999999975" prefWidth="392.0000999999975" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -49,8 +53,8 @@
               <children>
                 <MenuButton layoutX="134.0" layoutY="22.0" mnemonicParsing="false" text="Choose a Mode">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Reset Password" fx:id="HandleResetMode" />
-                    <MenuItem mnemonicParsing="false" text="Delete Account" fx:id="HandleDeleteMode" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleResetMode" text="Reset Password" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleDeleteMode" text="Delete Account" />
                   </items>
                 </MenuButton>
                 <Label id="rPassUserLabel" fx:id="UserLabel" layoutX="78.0" layoutY="68.0" prefWidth="55.000099999997474" text="Username:" />

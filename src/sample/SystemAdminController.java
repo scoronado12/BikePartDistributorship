@@ -187,11 +187,39 @@ public class SystemAdminController implements Initializable {
     }
 
     @FXML
+    private void handleResetMode(ActionEvent event) {
+    	deleteAcctButton.setVisible(false);
+    	confDelCheckBox.setVisible(false);
+    	
+    	rPassNewLabel.setVisible(true);
+    	rPassNewTextField.setVisible(true);
+    	rPassButton.setVisible(true);
+    	manStatusTextArea.setVisible(true);
+    }
+
+    @FXML
+    private void handleDeleteMode(ActionEvent event) {
+    	rPassNewLabel.setVisible(false);
+    	rPassNewTextField.setVisible(false);
+    	rPassButton.setVisible(false);
+    	
+    	deleteAcctButton.setVisible(true);
+    	confDelCheckBox.setVisible(true);
+    	manStatusTextArea.setVisible(true);
+    	
+    }
+    
+    @FXML
     private void handleResetButton(ActionEvent event) {
+    	String username = userTextField.getText();
+    	String pass = passTextField.getText();
     }
 
     @FXML
     private void handleDeleteButton(ActionEvent event) {
+    	String username = userTextField.getText();
+    	String pass = passTextField.getText();
+    	LoginAccount cannedEmployee = LoginAccount.verify(username, pass);
     }
 
     @FXML

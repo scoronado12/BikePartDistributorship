@@ -8,6 +8,8 @@ package sample;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import basic.Warehouse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -79,7 +81,7 @@ public class OfficeManagerController implements Initializable {
     @FXML
     private Label databaseLabel;
     @FXML
-    private ComboBox<?> warehousesComboBox;
+    private ComboBox<Warehouse> warehousesComboBox;
 
     /**
      * Initializes the controller class.
@@ -87,7 +89,7 @@ public class OfficeManagerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        warehousesComboBox.setItems(Main.warehouseArrayList);
+        warehousesComboBox.setItems(Main.warehouseDB);
     }    
 
     @FXML
@@ -119,6 +121,10 @@ public class OfficeManagerController implements Initializable {
     	
     	
     	//TODO Combo Box population - fill with warehouses
+        /*
+         * This should be done in initialize
+         * - Stefano
+         */
     	}
 
     @FXML

@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    public static ObservableList<Warehouse> warehouseArrayList;
+    public static ObservableList<Warehouse> warehouseDB;
     /** WarehouseDB
      *  Keeps track of Warehouses
      */

@@ -33,7 +33,7 @@ public class SysAdmin extends LoginAccount {
      * deleteUser() - removes a user from the list of Users
      * @param firedUser
      */
-    public void deleteUser(LoginAccount firedUser){
+    public static void deleteUser(LoginAccount firedUser){
         System.out.println("Removing user " + firedUser.getUsername());
         users.remove(firedUser);
     }

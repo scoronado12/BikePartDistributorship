@@ -209,6 +209,16 @@ public class SystemAdminController implements Initializable {
     private void handleResetButton(ActionEvent event) {
     	String username = userTextField.getText();
     	String pass = passTextField.getText();
+    	String newPass = rPassNewTextField.getText();
+    	LoginAccount passChange = LoginAccount.verify(username, pass);
+    	if (passChange == null) {
+    		manStatusTextArea.appendText("-User Not Found-\n");
+    	}
+    	else {
+    		passChange.setPassword(newPass);
+    		manStatusTextArea.appendText("User: " + passChange.getUsername()
+    				+ " password changed.\n");
+    	}
     }
 
     @FXML
@@ -216,6 +226,14 @@ public class SystemAdminController implements Initializable {
     	String username = userTextField.getText();
     	String pass = passTextField.getText();
     	LoginAccount cannedEmployee = LoginAccount.verify(username, pass);
+    	if (cannedEmployee == null) {
+    		manStatusTextArea.appendText("-User Not Found-\n");
+    	}
+    	else {
+    		manStatusTextArea.appendText("User: " + cannedEmployee.getUsername()
+    				+ " has been removed from the system.\n");
+    		SysAdmin.deleteUser(cannedEmployee);
+    	}
     }
 
     @FXML

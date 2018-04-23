@@ -33,7 +33,7 @@
                 <TextField fx:id="emailTextField" layoutX="29.0" layoutY="90.0" prefHeight="26.0" prefWidth="308.0" promptText="E-Mail" />
                 <TextField id="userTextField" fx:id="createUserTextField" layoutX="32.0" layoutY="126.0" prefHeight="26.0" prefWidth="302.0" promptText="User Name" />
                 <Button fx:id="createButton" layoutX="141.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleCreateAccount" text="Create Account" />
-                <TextField fx:id="wHSATextField" layoutX="32.0" layoutY="196.0" prefHeight="25.0" prefWidth="303.0" />
+                <TextField fx:id="wHSATextField" layoutX="32.0" layoutY="196.0" prefHeight="25.0" prefWidth="303.0" visible="false" />
                         <PasswordField fx:id="createPassTextField" layoutX="31.0" layoutY="161.0" prefHeight="26.0" prefWidth="304.0" promptText="Password" />
                         <Button layoutX="7.0" layoutY="10.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
               </children>

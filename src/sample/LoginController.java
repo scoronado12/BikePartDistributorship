@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -31,6 +32,9 @@ public class LoginController implements Initializable{
     public PasswordField passwordField;
 
     @FXML
+    public Label incorrectMsg;
+
+    @FXML
     void loginAction(ActionEvent event) throws Exception{
 
         String userName;
@@ -41,8 +45,11 @@ public class LoginController implements Initializable{
 
         LoginAccount la = LoginAccount.verify(userName, password);
 
+
         if (la == null){
             System.out.println("User name or password is incorrect.");
+            incorrectMsg.setVisible(true);
+            passwordField.clear();
         }
 
         else if (la instanceof OfficeManager){

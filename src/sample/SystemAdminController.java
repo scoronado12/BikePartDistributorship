@@ -196,6 +196,7 @@ public class SystemAdminController implements Initializable {
 
     @FXML
     private void logOut(ActionEvent event) throws IOException {
+        System.out.println("Logging out and loading Login Window");
         Parent homePageParent = FXMLLoader.load(getClass().getResource("LoginWindow.fxml"));
         Scene homePageScene = new Scene(homePageParent);
         Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

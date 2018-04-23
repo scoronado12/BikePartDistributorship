@@ -185,7 +185,7 @@ public class SystemAdminController implements Initializable {
     }
 
     @FXML
-    private void handleResetMode(ActionEvent event) {
+    private void HandleResetMode(ActionEvent event) {
     	deleteAcctButton.setVisible(false);
     	confDelCheckBox.setVisible(false);
     	
@@ -197,7 +197,7 @@ public class SystemAdminController implements Initializable {
     }
 
     @FXML
-    private void handleDeleteMode(ActionEvent event) {
+    private void HandleDeleteMode(ActionEvent event) {
     	rPassNewLabel.setVisible(false);
     	rPassNewTextField.setVisible(false);
     	rPassButton.setVisible(false);

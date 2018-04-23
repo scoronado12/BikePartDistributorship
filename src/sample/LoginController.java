@@ -18,13 +18,16 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 
-/** Controls the LoginWindow.fxml
- *  Replaces old project2gui.fxml
+/** Simple Login Window Controller
+ *
+ *
  */
 
 public class LoginController implements Initializable{
 
-
+    /**
+     *
+     */
     @FXML
     public TextField userNameField;
 
@@ -33,6 +36,13 @@ public class LoginController implements Initializable{
 
     @FXML
     public Label incorrectMsg;
+
+    /**
+     * loginAction
+     * Pulls the username and password and opens up the respective Controller.
+     * @param event - Button Click
+     * @throws Exception - FXML loading depends on exception if something goes wrong
+     */
 
     @FXML
     void loginAction(ActionEvent event) throws Exception{

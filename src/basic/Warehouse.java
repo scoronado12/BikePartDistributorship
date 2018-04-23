@@ -268,6 +268,28 @@ public class Warehouse{
 
     }
 
+    public static void transfer(Warehouse src, Warehouse destWh, int amount, BikePart srcBp){
+
+        srcBp.setQuantity(srcBp.getQuantity() - amount); //remove from source
+
+        if (destWh.BikePartList.contains(srcBp.getPartNumber())) { //if it is in there
+            System.out.println("Detected BikePart in destination");
+            srcBp.addQuantity(amount); //add on to it
+
+        } else { //if not create new BikePrt
+
+            System.out.println("Inserting BikePart");
+
+            srcBp.setQuantity(amount);
+            BikePart newEntry = srcBp;
+
+            destWh.add(newEntry);
+
+        }
+
+
+    }
+
 
     /**
      * toString - allows the warehouse to be referenced by name

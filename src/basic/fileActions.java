@@ -152,9 +152,8 @@ public class fileActions {
      */
 
 
-    public static void readForTransfer(String fileName, Warehouse src) {
+    public static void readForTransfer(String fileName, Warehouse src, Warehouse destWh) {
 
-        String sourceDest = "";
         String itemAmount = "";
 
         if ((fileName == null) || fileName.equals("")){
@@ -163,24 +162,20 @@ public class fileActions {
             File file = new File(fileName);
             try{
                 Scanner reader = new Scanner(file);
-                //always assume that first line specifies details of transfer
-                sourceDest = reader.nextLine(); //grab first line as one String
-                String sourceDestParts[] = sourceDest.split(","); // sourceDestParts[0] = source; parts[1] = dest; both of String
 
-
-                while (reader.hasNextLine()){
+                while (reader.hasNextLine()) {
                     itemAmount = reader.nextLine();
                     String itemAmountParts[] = itemAmount.split(","); // itemAmountParts[0] = itemname (ofString); itemAmountParts[1] = integer
                     int amount = Integer.parseInt(itemAmountParts[1]);
-                    String sourceWh = sourceDestParts[0];
-                    String destWh = sourceDestParts[1];
-                    System.out.println("FileActions.readForTransfer() :Transferring " + amount + " from " + sourceWh + " to " + destWh);
+                    System.out.println("FileActions.readForTransfer() :Transferring " + amount + " from " + src.toString() + " to " + destWh.toString());
                     String partName = itemAmountParts[0];
 
+                    if (src.BikePartList.contains(src.findBp(partName))) {
+                        Warehouse.transfer(src, destWh, amount, src.findBp(partName)); //bp is from src
 
-                    BikePart bp = Controller.getTheBp(partName, sourceWh);
-                    Controller.transferRemove(sourceWh, itemAmountParts[0], amount); //decrement in source
-                    Controller.transferAdd(bp,itemAmountParts[0], sourceDestParts[1] ,amount); //increment in destination | transferAdd(bp, partName, destWh, amnt)
+                    } else {
+                        System.out.println("Bike Part does not exist!");
+                    }
                 }
             } catch (FileNotFoundException e) {
                 System.err.println("Sorry, file Not Found\nTry again.");

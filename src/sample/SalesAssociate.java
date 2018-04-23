@@ -17,7 +17,7 @@ public class SalesAssociate extends LoginAccount {
 	//ArrayList to keep track of each sale
 	ArrayList<SalesInvoice> totalSales = new ArrayList<SalesInvoice>();
 	
-    public SalesAssociate(String username, String password, String firstName, String lastName) {
+    public SalesAssociate(String username, String password, String firstName, String lastName, String SalesVan) {
         super(username, password, firstName, lastName);
     }
     

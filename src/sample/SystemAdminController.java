@@ -126,7 +126,7 @@ public class SystemAdminController implements Initializable {
         		String username = userTextField.getText();
         		String password = passTextField.getText();
         		String van = wHSATextField.getText();
-    			WhManager sA = new WhManager(username, password, firstName,
+    			SalesAssociate sA = new SalesAssociate(username, password, firstName,
     					lastName, van);
 				LoginAccount.users.add(sA);
         		acctStatusTextArea.appendText("User: " + username + 

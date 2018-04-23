@@ -23,6 +23,7 @@ public class WhManager extends LoginAccount {
      */
     protected Warehouse wh = new Warehouse();
 	private Scanner read;
+	protected String warehouseName;
 /**
  * WhManager Object
  * @param username ; username for account
@@ -38,6 +39,10 @@ public class WhManager extends LoginAccount {
 
     public void displayInventory(){
     	wh.printAll();
+    }
+    
+    public static String getWarehouse() {
+    	return warehouseName;
     }
     
     public void transferInventory(Warehouse source, Warehouse destination, BikePart bp, int quantityToMove){

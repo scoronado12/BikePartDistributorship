@@ -7,6 +7,7 @@ package sample;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,6 +33,8 @@ import javafx.stage.Stage;
  * @author Tripp
  */
 public class WHManagerController implements Initializable {
+	boolean nameMode = false;
+	boolean numberMode = false;
 
     @FXML
     private TextField textFieldInv;
@@ -237,15 +240,37 @@ public class WHManagerController implements Initializable {
 
     @FXML
     private void HandleSortButton(ActionEvent event) {
-    	//sort Stuff again
+        ArrayList<String> printList = new ArrayList<>();
+        String sortTarget = WhManager.getWarehouse();
+        if (nameMode == true) {
+            printList = Project2BikePart.sortName(sortTarget);
+            textAreaSort.appendText(sortTarget + " sorted alphabetically:\n");
+        }
+        else if (numberMode == true) {
+            printList = Project2BikePart.sortNumber(sortTarget);
+            textAreaSort.appendText(sortTarget + " sorted numerically:\n");
+        }
+        else {
+            textAreaSort.appendText("Please choose a sort method.\n");
+        }
+        for (int i = 0; printList.size() > i; i++) {
+            textAreaSort.appendText(printList.get(i) + "\n");
+        }
+        textAreaSort.appendText("\n");
     }
 
     @FXML
     private void HandleSortName(ActionEvent event) {
+        nameMode = true;
+        numberMode = false;
+        menuSort.setText("Part Name");
     }
 
     @FXML
     private void HandleSortNumber(ActionEvent event) {
+        numberMode = true;
+        nameMode = false;
+        menuSort.setText("Part Number");
     }
 
     @FXML

@@ -87,6 +87,7 @@ public class OfficeManagerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        warehousesComboBox.setItems(Main.warehouseArrayList);
     }    
 
     @FXML
@@ -139,7 +140,8 @@ public class OfficeManagerController implements Initializable {
     @FXML
     private void HandleSearchButtonAction(ActionEvent event) {
     	if (partNumLabel.isVisible() == true) {
-    		int targetID = Integer.parseInt(searchTextField.getText()); 
+    		int targetID = Integer.parseInt(searchTextField.getText());
+
     	}
     	else if (partNameLabel.isVisible() == true) {
     		String targetName = searchTextField.getText(); 

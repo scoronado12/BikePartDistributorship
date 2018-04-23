@@ -43,6 +43,7 @@ public class SalesAssociate extends LoginAccount {
     	totalSales.clear();
     }
 
+
     @Override
     public String toString() {
         return "SalesAssociate " + firstName + " " + lastName + " " + username + " " + email; }

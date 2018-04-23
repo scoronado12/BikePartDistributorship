@@ -18,6 +18,7 @@ public class Main extends Application {
      *  Keeps track of Warehouses
      */
     public static ObservableList<Warehouse> warehouseDB;
+    public static LoginAccount currentUser = new LoginAccount();
 
 
     /**
@@ -75,4 +76,11 @@ public class Main extends Application {
 
         launch(args);
     }
+
+	public static void accountTransfer(LoginAccount la) {
+		currentUser = la;
+	}
+	public static LoginAccount getCurrentUser() {
+		return currentUser;
+	}
 }

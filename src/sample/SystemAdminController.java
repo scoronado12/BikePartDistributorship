@@ -91,17 +91,20 @@ public class SystemAdminController implements Initializable {
 
     @FXML
     private void HandleOfficeMan(ActionEvent event) {
+    	AcctTypeMenu.setText("Office Manager");
     	wHSATextField.setVisible(false);
     }
 
     @FXML
     private void HandleSalesAsso(ActionEvent event) {
+    	AcctTypeMenu.setText("Sales Associate");
     	wHSATextField.setVisible(true);
     	wHSATextField.setPromptText("Sales Van");
     }
 
     @FXML
     private void HandleWareHouseMan(ActionEvent event) {
+    	AcctTypeMenu.setText("Warehouse Manager");
     	wHSATextField.setVisible(true);
     	wHSATextField.setPromptText("Warehouse");
     }

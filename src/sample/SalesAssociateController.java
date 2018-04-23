@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import basic.LoginAccount;
 import basic.Warehouse;
 import basic.fileActions;
 import javafx.event.ActionEvent;
@@ -29,6 +30,7 @@ import javafx.stage.Stage;
  * @author Tripp
  */
 public class SalesAssociateController implements Initializable {
+	LoginAccount user = Main.getCurrentUser();
 
     @FXML
     private TextArea vanTextArea;
@@ -131,6 +133,11 @@ public class SalesAssociateController implements Initializable {
 
     @FXML
     private void handleAddToSaleArrayAction(ActionEvent event) {
+    	String client = clientTextField.getText();
+    	
+    	if (numLabel.isVisible() == true) {
+
+    	}
     }
 
     @FXML

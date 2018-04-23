@@ -28,6 +28,9 @@ public class LoginAccount extends Person {
 		
 	}
 
+	public LoginAccount() {
+	}
+
 	/** add() - Adds a enry to the ArrayList of usernames
 	 *
 	 * @param user

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -48,9 +49,9 @@
               <children>
                 <MenuButton layoutX="134.0" layoutY="22.0" mnemonicParsing="false" text="Choose a Mode">
                   <items>
-                    <MenuItem fx:id="HandleResetMode" mnemonicParsing="false" text="Reset Password" />
-                    <MenuItem fx:id="HandleDeleteMode" mnemonicParsing="false" text="Delete Account" />
-                  </items>
+                    <MenuItem mnemonicParsing="false" onAction="#HandleResetMode" text="Reset Password" />
+                    <MenuItem mnemonicParsing="false" onAction="#HandleDeleteMode" text="Delete Account" />
+                   </items>
                 </MenuButton>
                 <Label id="rPassUserLabel" fx:id="UserLabel" layoutX="78.0" layoutY="68.0" prefWidth="55.000099999997474" text="Username:" />
                 <Label id="rPassPassLabel" fx:id="PassLabel" layoutX="81.0" layoutY="91.0" text="Password:" />

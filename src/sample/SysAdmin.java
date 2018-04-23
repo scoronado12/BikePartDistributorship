@@ -1,6 +1,10 @@
 package sample;
 import basic.LoginAccount;
 
+/** System Admin - Defines What a SysAdmin can do
+ * @author scoronado
+ */
+
 public class SysAdmin extends LoginAccount {
 
     /**

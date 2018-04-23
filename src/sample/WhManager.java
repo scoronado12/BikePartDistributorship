@@ -41,7 +41,7 @@ public class WhManager extends LoginAccount {
     	wh.printAll();
     }
     
-    public static String getWarehouse() {
+    public String getWarehouse() {
     	return warehouseName;
     }
     
@@ -74,13 +74,6 @@ public class WhManager extends LoginAccount {
     }
     //needs to take in a text file
     public void updateInventory(String fileName) throws FileNotFoundException {
-
-        /*Is this what you want?
-         * - Stefano
-         * 
-         * Yes
-         * -Mitchell
-         */
         File file = new File(fileName);
         read = new Scanner(file);
         

@@ -237,17 +237,17 @@ public class WHManagerController implements Initializable {
             String targetName = searchTextField.getText();
         }
     }
-
+    /*
     @FXML
     private void HandleSortButton(ActionEvent event) {
         ArrayList<String> printList = new ArrayList<>();
         String sortTarget = WhManager.getWarehouse();
         if (nameMode == true) {
-            printList = Project2BikePart.sortName(sortTarget);
+           // printList = Project2BikePart.sortName(sortTarget);
             textAreaSort.appendText(sortTarget + " sorted alphabetically:\n");
         }
         else if (numberMode == true) {
-            printList = Project2BikePart.sortNumber(sortTarget);
+            //printList = Project2BikePart.sortNumber(sortTarget);
             textAreaSort.appendText(sortTarget + " sorted numerically:\n");
         }
         else {
@@ -258,7 +258,7 @@ public class WHManagerController implements Initializable {
         }
         textAreaSort.appendText("\n");
     }
-
+*/
     @FXML
     private void HandleSortName(ActionEvent event) {
         nameMode = true;

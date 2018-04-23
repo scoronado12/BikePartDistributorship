@@ -66,7 +66,7 @@ public class Main extends Application {
         LoginAccount.users.add(SysAdminStefano);
 
         //Office manager gusty
-        OfficeManager gusty = new OfficeManager("gcooper", "bicycle", "Gusty", "Cooper");
+        OfficeManager gusty = new OfficeManager("gusty", "bike", "Gusty", "Cooper");
         LoginAccount.users.add(gusty);
 
 

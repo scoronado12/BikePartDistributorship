@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesAssociateController">
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesAssociateController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="423.0" prefWidth="444.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -29,6 +29,7 @@
                   </font>
                 </Label>
                 <Label id="sAWelcomeLabel" fx:id="WelcomeLabel" font="$x1" layoutX="97.0" layoutY="22.0" prefWidth="210.0" text="" />
+                        <Button layoutX="333.0" layoutY="20.0" mnemonicParsing="false" onAction="#logOutButtonMethod" text="Log Out" />
               </children>
             </AnchorPane>
           </content>

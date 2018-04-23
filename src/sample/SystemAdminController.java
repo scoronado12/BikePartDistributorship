@@ -81,7 +81,6 @@ public class SystemAdminController implements Initializable {
     private CheckBox confDelCheckBox;
     @FXML
     private MenuButton manageMenuBox;
-
     /**
      * Initializes the controller class.
      */
@@ -126,7 +125,7 @@ public class SystemAdminController implements Initializable {
         		String van = wHSATextField.getText();
     			WhManager sA = new WhManager(username, password, firstName,
     					lastName, van);
-    			int size = LoginAccount.add(sA);
+				LoginAccount.users.add(sA);
         		acctStatusTextArea.appendText("User: " + username + 
         				" Account Type: Sales Associate ~ Created\n");
         	}
@@ -152,7 +151,7 @@ public class SystemAdminController implements Initializable {
         		
     			WhManager wM = new WhManager(username, password, firstName,
     					lastName, warehouse);
-    			int size = LoginAccount.add(wM);
+    			LoginAccount.users.add(wM);
         		acctStatusTextArea.appendText("User: " + username + 
         				" Account Type: Warehouse Manager ~ Created\n");
         	}
@@ -176,7 +175,7 @@ public class SystemAdminController implements Initializable {
     			
     			OfficeManager oM = new OfficeManager(username, password,
     					firstName, lastName);
-    			int size = LoginAccount.add(oM);
+    			LoginAccount.users.add(oM);
         		acctStatusTextArea.appendText("User: " + username + 
         				" Account Type: Office Manager ~ Created\n");
     		

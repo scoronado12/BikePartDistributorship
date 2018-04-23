@@ -152,7 +152,7 @@ public class fileActions {
      */
 
 
-    /*public static void readForTransfer(String fileName) {
+    public static void readForTransfer(String fileName, Warehouse src) {
 
         String sourceDest = "";
         String itemAmount = "";
@@ -188,7 +188,7 @@ public class fileActions {
             }
         }
 
-    }*/
+    }
 
 
 

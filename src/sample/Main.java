@@ -14,10 +14,10 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    public static ObservableList<Warehouse> warehouseDB;
     /** WarehouseDB
      *  Keeps track of Warehouses
      */
+    public static ObservableList<Warehouse> warehouseDB;
 
 
     /**
@@ -60,6 +60,9 @@ public class Main extends Application {
         //Mitchell the warehouse Manager
         WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");
         LoginAccount.users.add(WManMitchell);
+
+        WhManager johnDoe = new WhManager("jdoe", "password", "John", "Doe", "DoesWH");
+        LoginAccount.users.add(johnDoe);
 
         //Sysadmin Stefano
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");

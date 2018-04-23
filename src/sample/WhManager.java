@@ -21,8 +21,8 @@ public class WhManager extends LoginAccount {
      * @param lastName  ; creates a last name for the person
      * @param Warehouse; The maintained warehouse of the user
      */
-    protected Warehouse wh = new Warehouse();
-	private Scanner read;
+    protected static Warehouse wh = new Warehouse();
+	private static Scanner read;
 	protected String warehouseName;
 /**
  * WhManager Object
@@ -73,7 +73,7 @@ public class WhManager extends LoginAccount {
 
     }
     //needs to take in a text file
-    public void updateInventory(String fileName) throws FileNotFoundException {
+    public static void updateInventory(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
         read = new Scanner(file);
         
@@ -101,14 +101,12 @@ public class WhManager extends LoginAccount {
     				
     				}
     			}    
-    		catch (FileNotFoundException e) 
-    		{        
+    		catch (FileNotFoundException e) {        
     			e.printStackTrace();
-    			}
-    		
     		}
-        
-        }
+    	}
+    }
+    
         
         
 

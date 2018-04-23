@@ -5,6 +5,7 @@
  */
 package sample;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -164,10 +165,10 @@ public class WHManagerController implements Initializable {
     }
 
     @FXML
-    private void HandleAddButton(ActionEvent event) {
+    private void HandleAddButton(ActionEvent event) throws FileNotFoundException {
         if (radioNewInv.isSelected() == true) {
             String newFile = textFieldInv.getText();
-            //Project2BikePart.readInventory(newFile);
+            WhManager.updateInventory(newFile);
             textAreaInv.appendText("Inventory Added\n");
         }
         else if (radioUpdate.isSelected() == true) {

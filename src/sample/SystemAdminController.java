@@ -8,6 +8,8 @@ package sample;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import basic.LoginAccount;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -88,18 +90,100 @@ public class SystemAdminController implements Initializable {
 
     @FXML
     private void HandleOfficeMan(ActionEvent event) {
+    	salesAssoLabel.setVisible(false);
+    	wHManLabel.setVisible(false);
+    	wHSATextField.setVisible(false);
     }
 
     @FXML
     private void HandleSalesAsso(ActionEvent event) {
+    	wHManLabel.setVisible(false);
+    	salesAssoLabel.setVisible(true);
+    	wHSATextField.setVisible(true);
     }
 
     @FXML
     private void HandleWareHouseMan(ActionEvent event) {
+    	salesAssoLabel.setVisible(false);
+    	wHManLabel.setVisible(true);
+    	wHSATextField.setVisible(true);
     }
 
     @FXML
     private void handleCreateAccount(ActionEvent event) {
+    	
+    	//Sales Associate Account Creator
+    	if (salesAssoLabel.isVisible() == true) {
+    		if (firstTextField.getText().isEmpty() == false &&
+        			lastTextField.getText().isEmpty() == false &&
+        			emailTextField.getText().isEmpty() == false &&
+        			userTextField.getText().isEmpty() == false &&
+        			passTextField.getText().isEmpty() == false &&
+        			wHSATextField.getText().isEmpty() == false) {
+        		String firstName = firstTextField.getText();
+        		String lastName = lastTextField.getText();
+        		String email = emailTextField.getText();
+        		String username = userTextField.getText();
+        		String password = passTextField.getText();
+        		String van = wHSATextField.getText();
+    			WhManager sA = new WhManager(username, password, firstName,
+    					lastName, van);
+    			int size = LoginAccount.add(sA);
+        		acctStatusTextArea.appendText("User: " + username + 
+        				" Account Type: Sales Associate ~ Created\n");
+        	}
+    		else {
+    			acctStatusTextArea.appendText("Please Populate All Fields.\n");
+    		}
+    	}
+    	
+    	//Warehouse Manager Account Creator
+    	if (wHManLabel.isVisible() == true) {
+    		if (firstTextField.getText().isEmpty() == false &&
+        			lastTextField.getText().isEmpty() == false &&
+        			emailTextField.getText().isEmpty() == false &&
+        			userTextField.getText().isEmpty() == false &&
+        			passTextField.getText().isEmpty() == false &&
+        			wHSATextField.getText().isEmpty() == false) {
+        		String firstName = firstTextField.getText();
+        		String lastName = lastTextField.getText();
+        		String email = emailTextField.getText();
+        		String username = userTextField.getText();
+        		String password = passTextField.getText();
+        		String warehouse = wHSATextField.getText();
+        		
+    			WhManager wM = new WhManager(username, password, firstName,
+    					lastName, warehouse);
+    			int size = LoginAccount.add(wM);
+        		acctStatusTextArea.appendText("User: " + username + 
+        				" Account Type: Warehouse Manager ~ Created\n");
+        	}
+    		else {
+    			acctStatusTextArea.appendText("Please Populate All Fields.\n");
+    		}
+    	}
+    	
+    	//Office Manager Account Creator
+    	else {
+    		if (firstTextField.getText().isEmpty() == false &&
+    				lastTextField.getText().isEmpty() == false &&
+    				emailTextField.getText().isEmpty() == false &&
+    				userTextField.getText().isEmpty() == false &&
+    				passTextField.getText().isEmpty() == false) {
+    			String firstName = firstTextField.getText();
+    			String lastName = lastTextField.getText();
+    			String email = emailTextField.getText();
+    			String username = userTextField.getText();
+    			String password = passTextField.getText();
+    			
+    			OfficeManager oM = new OfficeManager(username, password,
+    					firstName, lastName);
+    			int size = LoginAccount.add(oM);
+        		acctStatusTextArea.appendText("User: " + username + 
+        				" Account Type: Office Manager ~ Created\n");
+    		
+    		}
+    	}
     }
 
     @FXML

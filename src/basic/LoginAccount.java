@@ -34,7 +34,7 @@ public class LoginAccount extends Person {
 	 * @return size as int
 	 */
 
-	public int add(LoginAccount user){
+	public static int add(LoginAccount user){
 		users.add(user);
 		return users.size();
 	}

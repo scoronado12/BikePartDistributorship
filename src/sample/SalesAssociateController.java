@@ -72,10 +72,6 @@ public class SalesAssociateController implements Initializable {
     private TextField searchTextField;
     @FXML
     private Label clientLabel;
-    @FXML
-    private ComboBox<Warehouse> sourceWh;
-    @FXML
-    private ComboBox<Warehouse> destWh;
 
     /**
      * Initializes the controller class.
@@ -83,8 +79,6 @@ public class SalesAssociateController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        sourceWh.setItems(Main.warehouseDB);
-        destWh.setItems(Main.warehouseDB);
 
     }    
 
@@ -94,13 +88,8 @@ public class SalesAssociateController implements Initializable {
     		String toVan = moveTextField.getText();
     		moveTextField.clear();
             vanTextArea.appendText(fileActions.catFile(toVan));
-            Warehouse selectedSrcWh = sourceWh.getSelectionModel().getSelectedItem();
-            Warehouse selectedDestWh = destWh.getSelectionModel().getSelectedItem();
-
-            fileActions.readForTransfer(toVan, selectedSrcWh, selectedDestWh);
-
-            sourceWh.getSelectionModel().clearSelection();
-            destWh.getSelectionModel().clearSelection();
+            //add to respective salesvan
+            //Main.warehouseDB..add(fileActions.importRead(toVan));
 
     	}
     	else {

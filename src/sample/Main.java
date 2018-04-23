@@ -54,6 +54,8 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+
+
         //John the sales associate
         SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans");
         LoginAccount.users.add(saTripp);

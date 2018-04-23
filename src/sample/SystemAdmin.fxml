@@ -44,7 +44,7 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <MenuButton layoutX="134.0" layoutY="22.0" mnemonicParsing="false" text="Choose a Mode">
+                <MenuButton fx:id="manageMenuBox" layoutX="134.0" layoutY="22.0" mnemonicParsing="false" text="Choose a Mode">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#HandleResetMode" text="Reset Password" />
                     <MenuItem mnemonicParsing="false" onAction="#HandleDeleteMode" text="Delete Account" />

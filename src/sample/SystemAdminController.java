@@ -79,6 +79,8 @@ public class SystemAdminController implements Initializable {
     private Button deleteAcctButton;
     @FXML
     private CheckBox confDelCheckBox;
+    @FXML
+    private MenuButton manageMenuBox;
 
     /**
      * Initializes the controller class.
@@ -187,6 +189,7 @@ public class SystemAdminController implements Initializable {
     	deleteAcctButton.setVisible(false);
     	confDelCheckBox.setVisible(false);
     	
+    	manageMenuBox.setText("Reset Password");
     	rPassNewLabel.setVisible(true);
     	rPassNewTextField.setVisible(true);
     	rPassButton.setVisible(true);
@@ -199,6 +202,7 @@ public class SystemAdminController implements Initializable {
     	rPassNewTextField.setVisible(false);
     	rPassButton.setVisible(false);
     	
+    	manageMenuBox.setText("Delete Account");
     	deleteAcctButton.setVisible(true);
     	confDelCheckBox.setVisible(true);
     	manStatusTextArea.setVisible(true);

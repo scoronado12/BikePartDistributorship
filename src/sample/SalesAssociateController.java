@@ -81,6 +81,38 @@ public class SalesAssociateController implements Initializable {
 
     @FXML
     private void handleMoveInvButton(ActionEvent event) {
+    	if (moveTextField.getText().isEmpty() == false) {
+    		String toVan = moveTextField.getText();
+    	}
+    	else {
+    		vanTextArea.appendText("Please Enter a Filename.");
+    	}
+    }
+    @FXML
+    private void HandleSellByName(ActionEvent event) {
+    	numLabel.setVisible(false);
+    	
+    	nameLabel.setVisible(true);
+    	entPromptLabel.setVisible(true);
+    	searchTextField.setVisible(true);
+    	clientLabel.setVisible(true);
+    	clientTextField.setVisible(true);
+    	quanLabel.setVisible(true);
+    	quanTextField.setVisible(true);
+    	
+    }
+    
+    @FXML
+    private void HandleSellByNumber(ActionEvent event) {
+    	nameLabel.setVisible(false);
+    	
+    	entPromptLabel.setVisible(true);
+    	searchTextField.setVisible(true);
+    	clientLabel.setVisible(true);
+    	numLabel.setVisible(true);
+    	clientTextField.setVisible(true);
+    	quanLabel.setVisible(true);
+    	quanTextField.setVisible(true);
     }
 
     @FXML

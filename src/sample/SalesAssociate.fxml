@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesAssociateController">
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesAssociateController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="423.0" prefWidth="444.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -23,12 +23,11 @@
                 <TextArea fx:id="vanTextArea" layoutX="50.0" layoutY="213.0" prefHeight="165.0" prefWidth="345.0" wrapText="true" />
                 <Button fx:id="moveButton" layoutX="183.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleMoveInvButton" text="Add to Van" />
                 <TextField id="moveTextArea" fx:id="moveTextField" layoutX="202.0" layoutY="106.0" prefWidth="174.99993896484375" promptText="Transfer File Path" />
-                <Label layoutX="18.0" layoutY="22.0" text="Welcome">
+                <Label layoutX="18.0" layoutY="22.0" prefHeight="41.0" prefWidth="102.0" text="Welcome">
                   <font>
                     <Font size="17.0" fx:id="x1" />
                   </font>
                 </Label>
-                <Label id="sAWelcomeLabel" fx:id="WelcomeLabel" font="$x1" layoutX="97.0" layoutY="22.0" prefWidth="210.0" text="" />
                         <Button layoutX="333.0" layoutY="20.0" mnemonicParsing="false" onAction="#logOutButtonMethod" text="Log Out" />
               </children>
             </AnchorPane>
@@ -56,8 +55,8 @@
                 </Label>
                 <Label id="salesAssoNameLabel" fx:id="nameLabel" layoutX="145.0" layoutY="67.0" text="Enter Name:" visible="false" />
                 <Label id="salesAssoNumLabel" fx:id="numLabel" layoutX="133.0" layoutY="67.0" text="Enter Number:" visible="false" />
-                <RadioButton fx:id="nameRadio" layoutX="17.0" layoutY="42.0" mnemonicParsing="false" text="Part Name" />
-                <RadioButton fx:id="numberRadio" layoutX="17.0" layoutY="67.0" mnemonicParsing="false" text="Part Number" />
+                <RadioButton fx:id="nameRadio" layoutX="17.0" layoutY="42.0" mnemonicParsing="false" onAction="#HandleSellByName" text="Part Name" />
+                <RadioButton fx:id="numberRadio" layoutX="17.0" layoutY="67.0" mnemonicParsing="false" onAction="#HandleSellByNumber" text="Part Number" />
                 <Label fx:id="entPromptLabel" font="$x2" layoutX="152.0" layoutY="11.0" text="Enter Part Information:" visible="false" />
                 <TextField id="numNameLabel" fx:id="searchTextField" layoutX="210.0" layoutY="64.0" prefWidth="111.0" visible="false" />
                 <Label fx:id="clientLabel" layoutX="133.0" layoutY="39.0" text="Client:" visible="false" />

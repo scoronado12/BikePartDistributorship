@@ -19,10 +19,10 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <Label layoutX="67.0" layoutY="109.0" text="Inventory Movement File:" />
+                <Label layoutX="14.0" layoutY="111.0" text="Inventory Movement File:" />
                 <TextArea fx:id="vanTextArea" layoutX="50.0" layoutY="213.0" prefHeight="165.0" prefWidth="345.0" wrapText="true" />
                 <Button fx:id="moveButton" layoutX="183.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleMoveInvButton" text="Add to Van" />
-                <TextField id="moveTextArea" fx:id="moveTextField" layoutX="202.0" layoutY="106.0" prefWidth="174.99993896484375" />
+                <TextField id="moveTextArea" fx:id="moveTextField" layoutX="202.0" layoutY="106.0" prefWidth="174.99993896484375" promptText="Transfer File Path" />
                 <Label layoutX="18.0" layoutY="22.0" text="Welcome">
                   <font>
                     <Font size="17.0" fx:id="x1" />

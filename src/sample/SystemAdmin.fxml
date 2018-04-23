@@ -5,14 +5,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<<<<<<< HEAD
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
+=======
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+>>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
 
+<<<<<<< HEAD
 <AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SystemAdminController">
+=======
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SystemAdminController">
+>>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="357.0000999999975" prefWidth="392.0000999999975" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -20,29 +33,24 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <MenuButton id="menuInvMan" fx:id="AcctTypeMenu" layoutX="180.0" layoutY="23.0" mnemonicParsing="false" prefWidth="131.0001220703125" text="Select a Type">
+                <MenuButton id="menuInvMan" fx:id="AcctTypeMenu" layoutX="117.0" layoutY="23.0" mnemonicParsing="false" prefWidth="131.0001220703125" text="Account Type">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#HandleOfficeMan" text="Office Manager" />
                     <MenuItem mnemonicParsing="false" onAction="#HandleSalesAsso" text="Sales Associate" />
                     <MenuItem mnemonicParsing="false" onAction="#HandleWareHouseMan" text="Warehouse Manager" />
                   </items>
                 </MenuButton>
-                <Text layoutX="100.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Type:" />
                 <TextArea id="textAreaInv" fx:id="acctStatusTextArea" layoutX="32.0" layoutY="248.0" prefHeight="65.0" prefWidth="333.0" visible="true" wrapText="true" />
-                <Label layoutX="25.0" layoutY="62.0" text="First Name:" />
-                <Label layoutX="209.0" layoutY="62.0" text="Last Name:" />
-                <Label layoutX="48.0" layoutY="90.0" text="E-Mail:" />
-                <Label layoutX="32.0" layoutY="148.0" text="Password:" />
-                <Label layoutX="29.0" layoutY="119.0" text="Username:" />
-                <TextField id="lastLabel" fx:id="lastTextField" layoutX="268.0" layoutY="59.0" prefWidth="111.0" />
-                <TextField id="firstNLabel" fx:id="firstTextField" layoutX="85.0" layoutY="59.0" prefWidth="111.0" />
-                <TextField fx:id="emailTextField" layoutX="85.0" layoutY="87.0" prefWidth="214.0" />
-                <TextField id="userTextField" fx:id="createUserTextField" layoutX="85.0" layoutY="116.0" prefWidth="169.0" />
-                <TextField id="passTextField" fx:id="createPassTextField" layoutX="85.0" layoutY="145.0" prefWidth="169.0" />
+                <TextField id="lastLabel" fx:id="lastTextField" layoutX="190.0" layoutY="59.0" prefHeight="26.0" prefWidth="147.0" promptText="Last Name" />
+                <TextField id="firstNLabel" fx:id="firstTextField" layoutX="29.0" layoutY="59.0" prefHeight="26.0" prefWidth="148.0" promptText="First Name" />
+                <TextField fx:id="emailTextField" layoutX="29.0" layoutY="90.0" prefHeight="26.0" prefWidth="308.0" promptText="E-Mail" />
+                <TextField id="userTextField" fx:id="createUserTextField" layoutX="32.0" layoutY="126.0" prefHeight="26.0" prefWidth="302.0" promptText="User Name" />
                 <Button fx:id="createButton" layoutX="145.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleCreateAccount" text="Create Account" />
                 <Label fx:id="wHManLabel" layoutX="22.0" layoutY="177.0" text="Warehouse:" visible="false" />
                 <TextField fx:id="wHSATextField" layoutX="85.0" layoutY="174.0" prefWidth="169.0" visible="false" />
                 <Label fx:id="salesAssoLabel" layoutX="32.0" layoutY="177.0" text="Sales Van:" visible="false" />
+                        <PasswordField fx:id="createPassTextField" layoutX="31.0" layoutY="161.0" prefHeight="26.0" prefWidth="304.0" promptText="Password" />
+                        <Button layoutX="7.0" layoutY="10.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
               </children>
             </AnchorPane>
           </content>
@@ -53,8 +61,13 @@
               <children>
                 <MenuButton layoutX="134.0" layoutY="22.0" mnemonicParsing="false" text="Choose a Mode">
                   <items>
+<<<<<<< HEAD
                     <MenuItem mnemonicParsing="false" onAction="#HandleResetMode" text="Reset Password" />
                     <MenuItem mnemonicParsing="false" onAction="#HandleDeleteMode" text="Delete Account" />
+=======
+                    <MenuItem fx:id="HandleResetMode" mnemonicParsing="false" text="Reset Password" />
+                    <MenuItem fx:id="HandleDeleteMode" mnemonicParsing="false" text="Delete Account" />
+>>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
                   </items>
                 </MenuButton>
                 <Label id="rPassUserLabel" fx:id="UserLabel" layoutX="78.0" layoutY="68.0" prefWidth="55.000099999997474" text="Username:" />

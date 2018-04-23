@@ -99,6 +99,9 @@ public class SalesAssociateController implements Initializable {
 
             fileActions.readForTransfer(toVan, selectedSrcWh, selectedDestWh);
 
+            sourceWh.getSelectionModel().clearSelection();
+            destWh.getSelectionModel().clearSelection();
+
     	}
     	else {
     		vanTextArea.appendText("Please Enter a Filename.");

@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.text.Text?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -13,7 +12,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SystemAdminController">
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SystemAdminController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="357.0000999999975" prefWidth="392.0000999999975" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -28,15 +27,13 @@
                     <MenuItem mnemonicParsing="false" onAction="#HandleWareHouseMan" text="Warehouse Manager" />
                   </items>
                 </MenuButton>
-                <TextArea id="textAreaInv" fx:id="acctStatusTextArea" layoutX="32.0" layoutY="248.0" prefHeight="65.0" prefWidth="333.0" visible="true" wrapText="true" />
+                <TextArea id="textAreaInv" fx:id="acctStatusTextArea" layoutX="32.0" layoutY="262.0" prefHeight="51.0" prefWidth="333.0" visible="true" wrapText="true" />
                 <TextField id="lastLabel" fx:id="lastTextField" layoutX="190.0" layoutY="59.0" prefHeight="26.0" prefWidth="147.0" promptText="Last Name" />
                 <TextField id="firstNLabel" fx:id="firstTextField" layoutX="29.0" layoutY="59.0" prefHeight="26.0" prefWidth="148.0" promptText="First Name" />
                 <TextField fx:id="emailTextField" layoutX="29.0" layoutY="90.0" prefHeight="26.0" prefWidth="308.0" promptText="E-Mail" />
                 <TextField id="userTextField" fx:id="createUserTextField" layoutX="32.0" layoutY="126.0" prefHeight="26.0" prefWidth="302.0" promptText="User Name" />
-                <Button fx:id="createButton" layoutX="145.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleCreateAccount" text="Create Account" />
-                <Label fx:id="wHManLabel" layoutX="22.0" layoutY="177.0" text="Warehouse:" visible="false" />
-                <TextField fx:id="wHSATextField" layoutX="85.0" layoutY="174.0" prefWidth="169.0" visible="false" />
-                <Label fx:id="salesAssoLabel" layoutX="32.0" layoutY="177.0" text="Sales Van:" visible="false" />
+                <Button fx:id="createButton" layoutX="141.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleCreateAccount" text="Create Account" />
+                <TextField fx:id="wHSATextField" layoutX="32.0" layoutY="196.0" prefHeight="25.0" prefWidth="303.0" />
                         <PasswordField fx:id="createPassTextField" layoutX="31.0" layoutY="161.0" prefHeight="26.0" prefWidth="304.0" promptText="Password" />
                         <Button layoutX="7.0" layoutY="10.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
               </children>

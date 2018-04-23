@@ -90,23 +90,19 @@ public class SystemAdminController implements Initializable {
 
     @FXML
     private void HandleOfficeMan(ActionEvent event) {
-    	salesAssoLabel.setVisible(false);
-    	wHManLabel.setVisible(false);
     	wHSATextField.setVisible(false);
     }
 
     @FXML
     private void HandleSalesAsso(ActionEvent event) {
-    	wHManLabel.setVisible(false);
-    	salesAssoLabel.setVisible(true);
     	wHSATextField.setVisible(true);
+    	wHSATextField.setPromptText("Sales Van");
     }
 
     @FXML
     private void HandleWareHouseMan(ActionEvent event) {
-    	salesAssoLabel.setVisible(false);
-    	wHManLabel.setVisible(true);
     	wHSATextField.setVisible(true);
+    	wHSATextField.setPromptText("Warehouse");
     }
 
     @FXML

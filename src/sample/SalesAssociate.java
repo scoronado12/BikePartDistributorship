@@ -2,9 +2,13 @@ package sample;
 
 import java.util.ArrayList;
 import basic.LoginAccount;
+import basic.Warehouse;
 import basic.BikePart;
 
 public class SalesAssociate extends LoginAccount {
+	
+	protected static Warehouse wh = new Warehouse();
+	
     /**
      * SalesAssociate Constructor
      *
@@ -18,8 +22,10 @@ public class SalesAssociate extends LoginAccount {
 	//ArrayList to keep track of each sale
 	ArrayList<SalesInvoice> totalSales = new ArrayList<SalesInvoice>();
 	
-    public SalesAssociate(String username, String password, String firstName, String lastName, String SalesVan) {
+    public SalesAssociate(String username, String password, String firstName, String lastName, String salesVan) {
         super(username, password, firstName, lastName);
+        wh.setName(salesVan);
+        
     }
     
     /**
@@ -42,7 +48,10 @@ public class SalesAssociate extends LoginAccount {
     public void resetSales() {
     	totalSales.clear();
     }
-
+    
+    public static String getSalesVan() {
+    	return salesVan;
+    }
 
     @Override
     public String toString() {

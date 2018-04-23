@@ -105,6 +105,13 @@ public class LoginController implements Initializable{
 
     }
 
+    /**
+     * Initialize
+     * To be Run upon loading
+     * @param location
+     * @param resources
+     */
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -148,6 +148,7 @@ public class OfficeManagerController implements Initializable {
 
     @FXML
     private void logOutButtonMethod(ActionEvent event) throws IOException {
+        System.out.println("Logging out and loading Login Window");
         Parent homePageParent = FXMLLoader.load(getClass().getResource("LoginWindow.fxml"));
         Scene homePageScene = new Scene(homePageParent);
         Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

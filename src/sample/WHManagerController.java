@@ -114,7 +114,7 @@ public class WHManagerController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    	yourWHLabel.setText(user.getWarehouse());
+    	yourWHLabel.setText(user.getWarehouseName());
     }    
 
     @FXML

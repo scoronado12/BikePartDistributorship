@@ -34,6 +34,8 @@ public class WhManager extends LoginAccount {
  */
     public WhManager(String username, String password, String firstName, String lastName, Warehouse warehouse) {
         super(username, password, firstName, lastName);
+        wh = warehouse;
+        warehouseName = wh.getWarehouseName();
     }
 
     public WhManager() {
@@ -44,7 +46,7 @@ public class WhManager extends LoginAccount {
     	wh.printAll();
     }
     
-    public String getWarehouse() {
+    public String getWarehouseName() {
     	return warehouseName;
     }
 

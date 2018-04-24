@@ -39,8 +39,8 @@ public class Warehouse{
      * Warehouse Object
      * Default constructor
      */
-      public Warehouse(){
-      warehouseName = "Default";
+     public Warehouse(){
+
      }
       public ArrayList<BikePart> getBPList(){
     	  return BikePartList;

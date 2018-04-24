@@ -252,6 +252,34 @@ public class Warehouse{
     }
 
     /**
+     * getPartInfoToDisplaybyPartNum(partNum) is used to query a BikePart object based on passing the part name
+     *
+     * @param partNumber - Part Name as String
+     * @return partInfo as string
+     */
+
+
+    public String getPartInfoToDisplaybyNum(int partNumber) {
+        int i = 0;
+        String partInfo = null;
+
+        for (BikePart bp : BikePartList) {
+            if (bp.getPartName() != null && bp.getPartNumber() == (partNumber)) {
+
+                partInfo = "Part Name: " + BikePartList.get(i).getPartName() + "\nCost: " + BikePartList.get(i).getPrice() + "\nQuantity: " + BikePartList.get(i).getQuantity();
+            }
+            i++;
+        }
+
+        if (partInfo == null) {
+            System.err.println("This Bike Part does not exist! \n");
+            return partInfo;
+        }
+
+        return partInfo;
+    }
+
+    /**
      * getPartInfo(partNum) Queries a BikePart object based on passing the part number and decreases quantity
      *
      * @param partNum - PartNumber as int

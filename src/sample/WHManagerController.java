@@ -199,6 +199,23 @@ public class WHManagerController implements Initializable {
         }
     }
 
+    @FXML
+    private void retrieveBP(ActionEvent event) {
+        if (searchNumLabel.isVisible() == true) {
+            System.out.println("Displaying part by number");
+            int partNum = Integer.parseInt(searchTextField.getText());
+            user.getWh().getPartInfoToDisplaybyNum(partNum);
+
+        } else if (searchNameLabel.isVisible() == true) {
+            System.out.println("Displaying part by name");
+
+            String partName = searchTextField.getText();
+            user.getWh().getPartInfoToDisplay(partName);
+        }
+
+
+    }
+
 
     @FXML
     private void HandleNameSearch(ActionEvent event) {

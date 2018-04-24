@@ -1,5 +1,6 @@
 package sample;
 
+import basic.BikePart;
 import basic.LoginAccount;
 import basic.Warehouse;
 import javafx.application.Application;
@@ -10,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class Main extends Application {
@@ -59,10 +61,11 @@ public class Main extends Application {
     public static void main(String[] args) {
 
 
-        //John the sales associate
-        SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans", "SalesVan1");
+        //John or Tripp the sales associate
+        Warehouse tripSV = new Warehouse("Tripp's SalesVan", new ArrayList<BikePart>());
+        SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans", tripSV);
         LoginAccount.users.add(saTripp);
-        warehouseDB.add(saTripp.getWh()); //salesVan
+        warehouseDB.add(tripSV); //salesVan
 
         //Mitchell the warehouse Manager
         WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");

@@ -2,6 +2,7 @@ package basic;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import sample.Main;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -152,9 +153,11 @@ public class fileActions {
      */
 
 
-    public static void readForTransfer(String fileName, Warehouse src, Warehouse destWh) {
+    public static void readForTransfer(String fileName) { // sa and whmanager
 
         String itemAmount = "";
+        Warehouse src = null;
+        Warehouse destWh = null;
 
         if ((fileName == null) || fileName.equals("")){
             System.out.print("None!");
@@ -165,6 +168,20 @@ public class fileActions {
                 //always assume that first line specifies details of transfer
                 String sourceDest = reader.nextLine(); //grab first line as one String
                 String sourceDestParts[] = sourceDest.split(","); // sourceDestParts[0] = source; parts[1] = dest; both of String
+
+                for (Warehouse wh : Main.warehouseDB) {
+                    if (wh.getWarehouseName() == sourceDestParts[0]) { //if any whs match this
+                        //do this
+                        src = wh.getWarehouse();
+                    }
+                }
+                for (Warehouse wh: Main.warehouseDB ) {
+                    if (wh.getWarehouseName() == sourceDestParts[1]) { //if any whs match this
+                        //do this
+                        destWh = wh.getWarehouse();
+                    }
+
+                }
 
 
 

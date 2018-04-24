@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OfficeManagerController">
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OfficeManagerController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="358.0" prefWidth="470.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -24,7 +24,7 @@
               <children>
                 <TextArea fx:id="checkStockTextArea" editable="false" layoutX="14.0" layoutY="118.0" prefHeight="195.0" prefWidth="430.0" wrapText="true" />
                 <TextField id="findUnitsLabel" fx:id="findUnitsTextField" layoutX="186.0" layoutY="37.0" prefWidth="71.0" />
-                <Label layoutX="14.0" layoutY="40.0" text="Find Parts with Less Than" />
+                <Label layoutX="36.0" layoutY="41.0" text="Find Parts with Less Than" />
                 <Label layoutX="268.0" layoutY="40.0" text="Units" />
                 <Button fx:id="locateLessButton" layoutX="169.0" layoutY="85.0" mnemonicParsing="false" onAction="#HandleCheckStockButton" text="Locate" />
                         <Button layoutX="382.0" layoutY="24.0" mnemonicParsing="false" onAction="#logOutButtonMethod" text="Log Out" />
@@ -38,16 +38,16 @@
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
                 <Label layoutX="40.0" layoutY="90.0" text="Date Range:" />
-                <Label layoutX="218.0" layoutY="85.0" prefHeight="22.0" prefWidth="24.0" text="to">
+                <Label layoutX="231.0" layoutY="88.0" prefHeight="22.0" prefWidth="24.0" text="to">
                   <font>
                     <Font size="14.0" fx:id="x1" />
                   </font>
                 </Label>
-                <Label layoutX="72.0" layoutY="17.0" text="Client:" />
-                <TextField fx:id="clientNameTextField" layoutX="118.0" layoutY="14.0" prefWidth="200.0" />
+                <Label layoutX="89.0" layoutY="17.0" text="Client:" />
+                <TextField fx:id="clientNameTextField" layoutX="143.0" layoutY="13.0" prefWidth="200.0" />
                 <Button fx:id="SearchInvButton" layoutX="169.0" layoutY="143.0" mnemonicParsing="false" onAction="#HandleSearchInvoicesButton" text="Search" />
-                <TextArea id="ManageInvTextArea" fx:id="ManageInvoTextArea" layoutX="14.0" layoutY="172.0" prefHeight="141.0" prefWidth="365.0" wrapText="true" />
-                <ComboBox id="mImonthComboBox" fx:id="fromMIMonComboBox" layoutX="118.0" layoutY="63.0" prefHeight="21.0" prefWidth="65.0" promptText="Month">
+                <TextArea id="ManageInvTextArea" fx:id="ManageInvoTextArea" layoutX="48.0" layoutY="174.0" prefHeight="141.0" prefWidth="365.0" wrapText="true" />
+                <ComboBox id="mImonthComboBox" fx:id="fromMIMonComboBox" layoutX="118.0" layoutY="63.0" prefHeight="25.0" prefWidth="79.0" promptText="Month">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -56,7 +56,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox id="mIDayComboBox" fx:id="fromMIDayComboBox" layoutX="197.0" layoutY="63.0" prefHeight="21.0" prefWidth="56.0" promptText="Day">
+                <ComboBox id="mIDayComboBox" fx:id="fromMIDayComboBox" layoutX="211.0" layoutY="63.0" prefHeight="25.0" prefWidth="63.0" promptText="Day">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -65,7 +65,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox id="mIYearComboBox" fx:id="fromMIYearComboBox" layoutX="271.0" layoutY="63.0" promptText="Year">
+                <ComboBox id="mIYearComboBox" fx:id="fromMIYearComboBox" layoutX="289.0" layoutY="63.0" promptText="Year">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -74,7 +74,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="toMIMonthComboBox" layoutX="118.0" layoutY="107.0" prefHeight="21.0" prefWidth="65.0" promptText="Month">
+                <ComboBox fx:id="toMIMonthComboBox" layoutX="118.0" layoutY="107.0" prefHeight="25.0" prefWidth="78.0" promptText="Month">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -83,7 +83,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="toMIDayComboBox" layoutX="197.0" layoutY="108.0" minWidth="45.0" prefHeight="21.0" prefWidth="56.0" promptText="Day">
+                <ComboBox fx:id="toMIDayComboBox" layoutX="211.0" layoutY="107.0" minWidth="45.0" prefHeight="25.0" prefWidth="63.0" promptText="Day">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -92,7 +92,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="toMIYearComboBox" layoutX="271.0" layoutY="107.0" promptText="Year">
+                <ComboBox fx:id="toMIYearComboBox" layoutX="289.0" layoutY="107.0" promptText="Year">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -113,9 +113,9 @@
                 <Label font="$x1" layoutX="218.0" layoutY="85.0" prefHeight="22.0" prefWidth="24.0" text="to" />
                 <Label layoutX="31.0" layoutY="17.0" text="Sales Associate:" />
                 <TextField id="clientNameTextField" fx:id="salesAssoTextField" layoutX="153.0" layoutY="12.0" prefWidth="200.0" />
-                <Button id="SearchInvButton" layoutX="136.0" layoutY="143.0" mnemonicParsing="false" onAction="#HandleGeneratePaycheck" text="Generate Paycheck" />
-                <TextArea id="ManageInvTextArea" fx:id="salesCommTextArea" layoutX="14.0" layoutY="172.0" prefHeight="141.0" prefWidth="365.0" wrapText="true" />
-                <ComboBox fx:id="fromSCMonthComboBox" layoutX="118.0" layoutY="63.0" prefHeight="21.0" prefWidth="65.0" promptText="Month">
+                <Button id="SearchInvButton" layoutX="160.0" layoutY="140.0" mnemonicParsing="false" onAction="#HandleGeneratePaycheck" text="Generate Paycheck" />
+                <TextArea id="ManageInvTextArea" fx:id="salesCommTextArea" layoutX="48.0" layoutY="174.0" prefHeight="141.0" prefWidth="365.0" wrapText="true" />
+                <ComboBox fx:id="fromSCMonthComboBox" layoutX="118.0" layoutY="63.0" prefHeight="25.0" prefWidth="78.0" promptText="Month">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -124,7 +124,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="fromSCDayComboBox" layoutX="197.0" layoutY="63.0" prefHeight="21.0" prefWidth="56.0" promptText="Day">
+                <ComboBox fx:id="fromSCDayComboBox" layoutX="210.0" layoutY="63.0" prefHeight="25.0" prefWidth="64.0" promptText="Day">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -133,7 +133,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="fromSCYearComboBox" layoutX="271.0" layoutY="63.0" promptText="Year">
+                <ComboBox fx:id="fromSCYearComboBox" layoutX="290.0" layoutY="63.0" promptText="Year">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -142,7 +142,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="toSCMonthComboBox" layoutX="118.0" layoutY="107.0" prefHeight="21.0" prefWidth="65.0" promptText="Month">
+                <ComboBox fx:id="toSCMonthComboBox" layoutX="118.0" layoutY="107.0" prefHeight="25.0" prefWidth="76.0" promptText="Month">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -151,7 +151,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="toSCDayComboBox" layoutX="197.0" layoutY="108.0" minWidth="45.0" prefHeight="21.0" prefWidth="56.0" promptText="Day">
+                <ComboBox fx:id="toSCDayComboBox" layoutX="210.0" layoutY="107.0" minWidth="45.0" prefHeight="25.0" prefWidth="64.0" promptText="Day">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -160,7 +160,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <ComboBox fx:id="toSCYearComboBox" layoutX="271.0" layoutY="107.0" promptText="Year">
+                <ComboBox fx:id="toSCYearComboBox" layoutX="290.0" layoutY="107.0" promptText="Year">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Item 1" />
@@ -177,17 +177,17 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <MenuButton fx:id="menuSSA" layoutX="143.0" layoutY="23.0" mnemonicParsing="false" text="Select Mode">
+                <MenuButton fx:id="menuSSA" layoutX="172.0" layoutY="21.0" mnemonicParsing="false" text="Select Mode">
                   <items>
                     <MenuItem fx:id="nameSearch" mnemonicParsing="false" onAction="#HandleNameSearch" text="Alphabetical Search" />
                     <MenuItem fx:id="numSearch" mnemonicParsing="false" onAction="#HandleNumSearch" text="Numerical Search" />
                   </items>
                 </MenuButton>
-                <TextArea id="textAreaSS" fx:id="searchTextArea" layoutX="14.0" layoutY="157.0" prefHeight="156.0" prefWidth="365.0" visible="false" wrapText="true" />
-                <TextField id="textSSTab" fx:id="searchTextField" layoutX="138.0" layoutY="54.0" prefWidth="184.0" visible="false" />
-                <Label id="labelSellMode" fx:id="partNumLabel" disable="false" layoutX="23.0" layoutY="57.0" text="Enter Part Number:" visible="false" />
-                <Label id="labelSearchMode" fx:id="partNameLabel" layoutX="35.0" layoutY="57.0" text="Enter Part Name:" visible="false" />
-                <Button fx:id="buttonSearch" layoutX="169.0" layoutY="128.0" onAction="#HandleSearchButtonAction" text="Search" visible="false" />
+                <TextArea id="textAreaSS" fx:id="searchTextArea" layoutX="53.0" layoutY="173.0" prefHeight="136.0" prefWidth="365.0" visible="false" wrapText="true" />
+                <TextField id="textSSTab" fx:id="searchTextField" layoutX="159.0" layoutY="53.0" prefWidth="184.0" visible="false" />
+                <Label id="labelSellMode" fx:id="partNumLabel" layoutX="46.0" layoutY="57.0" text="Enter Part Number:" visible="false" />
+                <Label id="labelSearchMode" fx:id="partNameLabel" layoutX="58.0" layoutY="57.0" text="Enter Part Name:" visible="false" />
+                <Button fx:id="buttonSearch" layoutX="204.0" layoutY="140.0" onAction="#HandleSearchButtonAction" text="Search" visible="false" />
                 <Label id="labelSSData" fx:id="databaseLabel" layoutX="91.0" layoutY="90.0" text="Choose Database:" visible="false" />
                 <ComboBox fx:id="warehousesComboBox" layoutX="197.0" layoutY="88.0" prefHeight="21.0" prefWidth="107.0" visible="false">
                   <items>

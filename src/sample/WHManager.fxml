@@ -39,7 +39,7 @@
                 <RadioButton fx:id="radioNewInv" layoutX="196.0" layoutY="64.0" mnemonicParsing="false" selected="false" text="New Inventory" toggleGroup="$groupFile" visible="false" />
                 <Label fx:id="labelFilename" layoutX="28.0" layoutY="99.0" text="Enter Filename:" visible="false" />
                 <TextArea fx:id="textAreaInv" layoutX="14.0" layoutY="180.0" prefHeight="133.0" prefWidth="365.0" visible="false" wrapText="true" />
-                <TextField fx:id="tfName" editable="false" layoutX="94.0" layoutY="53.0" prefWidth="138.0" promptText="Part Name" visible="false" />
+                <TextField fx:id="tfName" editable="false" layoutX="98.0" layoutY="52.0" prefWidth="138.0" promptText="Part Name" visible="false" />
                 <Button fx:id="buttonFileAdd" layoutX="125.0" layoutY="124.0" mnemonicParsing="false" onAction="#HandleAddButton" text="Process File" visible="false" />
                 <TextField fx:id="tfPartNo" layoutX="98.0" layoutY="79.0" prefWidth="138.0" promptText="Part Number" visible="false" />
                 <TextField fx:id="tfPrice" layoutX="281.0" layoutY="79.0" prefWidth="64.0" visible="false" />

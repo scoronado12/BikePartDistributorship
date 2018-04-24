@@ -138,6 +138,7 @@ public class WHManagerController implements Initializable {
         labelFilename.setVisible(true);
         textFieldInv.setVisible(true);
         buttonFileAdd.setVisible(true);
+        textAreaInv.setVisible(true);
     }
 
     @FXML
@@ -161,6 +162,7 @@ public class WHManagerController implements Initializable {
         labelQuan.setVisible(true);
         buttonMan.setVisible(true);
         onSaleCheckBox.setVisible(true);
+        textAreaInv.setVisible(true);
     }
 
     @FXML

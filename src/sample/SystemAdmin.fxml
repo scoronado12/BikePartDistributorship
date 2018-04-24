@@ -55,7 +55,7 @@
                 <Label id="rPassNewPassLabel" fx:id="rPassNewLabel" layoutX="54.0" layoutY="114.0" text="New Password:" visible="false" />
                 <TextField id="rPassUserTextField" fx:id="userTextField" layoutX="134.0" layoutY="65.0" prefWidth="200.0" />
                 <Button fx:id="rPassButton" layoutX="140.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleResetButton" text="Change Password" visible="false" />
-                <TextArea fx:id="manStatusTextArea" layoutX="97.0" layoutY="208.0" prefHeight="96.0" prefWidth="200.0" visible="false" wrapText="true" />
+                <TextArea fx:id="manStatusTextArea" editable="false" layoutX="97.0" layoutY="208.0" prefHeight="96.0" prefWidth="200.0" visible="false" wrapText="true" />
                 <Button id="rPassButton" fx:id="deleteAcctButton" layoutX="146.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete Account" visible="false" />
                 <CheckBox fx:id="confDelCheckBox" layoutX="150.0" layoutY="126.0" mnemonicParsing="false" text="Are You Sure?" visible="false" />
                         <PasswordField fx:id="passTextField" layoutX="134.0" layoutY="88.0" prefHeight="26.0" prefWidth="206.0" />

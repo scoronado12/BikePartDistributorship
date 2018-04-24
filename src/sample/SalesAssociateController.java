@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 
 import basic.LoginAccount;
 import basic.Warehouse;
+import basic.BikePart;
 import basic.fileActions;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -80,21 +81,32 @@ public class SalesAssociateController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
 
-    }    
+    }
 
+    /**Handle Move Inv Button - Handles importing of inventory
+     *
+     * @param event
+     * @throws FileNotFoundException
+     */
     @FXML
     private void handleMoveInvButton(ActionEvent event) throws FileNotFoundException {
     	if (moveTextField.getText().isEmpty() == false) {
     		String toVan = moveTextField.getText();
     		moveTextField.clear();
             vanTextArea.appendText(fileActions.catFile(toVan));
-            //add to respective salesvan
-            //Main.warehouseDB..add(fileActions.importRead(toVan));
-            //user.sell();
 
+            /*if (Main.getCurrentUser() instanceof SalesAssociate){
+
+                Main.getCurrentUser().
+
+            }*/
+
+
+            //add to respective salesvan
+            // SalesAssociate.getSalesVan().add(fileActions.importRead(toVan));
     	}
     	else {
-    		vanTextArea.appendText("Please Enter a Filename.");
+    		vanTextArea.appendText("Invalid File Name.");
     	}
     }
     @FXML

@@ -15,6 +15,7 @@ public class LoginAccount extends Person {
 	protected String username;
 	protected String password;
 	protected Person person;
+	protected static int index;
 	
 	/**
 	 * LoginAccount Constructor
@@ -91,9 +92,9 @@ public class LoginAccount extends Person {
 		if(users.isEmpty()) {
 			return null;
 		}
-		for(int i=0; i < users.size(); i++) {
-			if(userName2.equals(users.get(i).getUsername()) && password2.equals(users.get(i).getPassword())) {
-				verified = users.get(i);
+		for (index=0; index < users.size(); index++) {
+			if(userName2.equals(users.get(index).getUsername()) && password2.equals(users.get(index).getPassword())) {
+				verified = users.get(index);
 				isNotFound = false;
 			}
 		}
@@ -103,7 +104,12 @@ public class LoginAccount extends Person {
 		else {	
 		return verified;
 		}
-		}
 	}
+	
+	public static int getIndex() {
+		return index;
+	}
+}
+
 	
 

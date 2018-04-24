@@ -66,7 +66,8 @@ public class LoginController implements Initializable{
         else if (la instanceof OfficeManager){
             System.out.println("Logging in " + userName + " as Office Manager");
             
-            Main.accountTransfer(la);
+            OfficeManager current = (OfficeManager) users.get(LoginAccount.getIndex());
+            Main.accountTransfer(current);
             Parent homePageParent = FXMLLoader.load(getClass().getResource("OfficeManager.fxml"));
             Scene homePageScene = new Scene(homePageParent);
             Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -76,8 +77,9 @@ public class LoginController implements Initializable{
 
         else if (la instanceof WhManager){
             System.out.println("Logging in " + userName + " as Warehouse Manager");
-
-            Main.accountTransfer(la);
+            
+            WhManager current = (WhManager) users.get(LoginAccount.getIndex());
+            Main.accountTransfer(current);
             Parent homePageParent = FXMLLoader.load(getClass().getResource("WHManager.fxml"));
             Scene homePageScene = new Scene(homePageParent);
             Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -88,7 +90,8 @@ public class LoginController implements Initializable{
         else if (la instanceof SalesAssociate){
             System.out.println("Logging in " + userName + " as SalesAssociate");
             
-            Main.accountTransfer(la);
+            SalesAssociate current = (SalesAssociate) users.get(LoginAccount.getIndex());
+            Main.accountTransfer(current);
             Parent homePageParent = FXMLLoader.load(getClass().getResource("SalesAssociate.fxml"));
             Scene homePageScene = new Scene(homePageParent);
             Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -99,7 +102,8 @@ public class LoginController implements Initializable{
         else if (la instanceof SysAdmin){
         	System.out.println("Logging in " + userName + " as SysAdmin");
         	
-        	Main.accountTransfer(la);
+        	SysAdmin current = (SysAdmin) users.get(LoginAccount.getIndex());
+        	Main.accountTransfer(current);
             System.out.println("Logging in " + userName + " as SysAdmin");
             Parent homePageParent = FXMLLoader.load(getClass().getResource("SystemAdmin.fxml"));
             Scene homePageScene = new Scene(homePageParent);

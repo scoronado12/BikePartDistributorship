@@ -90,6 +90,7 @@ public class SalesAssociateController implements Initializable {
             vanTextArea.appendText(fileActions.catFile(toVan));
             //add to respective salesvan
             //Main.warehouseDB..add(fileActions.importRead(toVan));
+            //user.sell();
 
     	}
     	else {

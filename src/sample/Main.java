@@ -62,7 +62,7 @@ public class Main extends Application {
         //John the sales associate
         SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans", "SalesVan1");
         LoginAccount.users.add(saTripp);
-        //warehouseDB.add(saTripp.getWh()); //salesVan
+        warehouseDB.add(saTripp.getWh()); //salesVan
 
         //Mitchell the warehouse Manager
         WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");

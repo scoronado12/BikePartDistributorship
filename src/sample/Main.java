@@ -74,7 +74,7 @@ public class Main extends Application {
         LoginAccount.users.add(WManMitchell);
         warehouseDB.add(WManMitchell.getWh());
 
-        Warehouse JohnSV = new Warehouse("John's SalesVan", empty);
+        Warehouse JohnSV = new Warehouse("John Doe's SalesVan", empty);
         WhManager johnDoe = new WhManager("jdoe", "password", "John", "Doe", JohnSV);
         LoginAccount.users.add(johnDoe);
         warehouseDB.add(johnDoe.getWh());

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import basic.LoginAccount;
 import basic.Warehouse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,7 +55,7 @@ public class OfficeManagerController implements Initializable {
     @FXML
     private TextArea ManageInvTextArea;
     @FXML
-    private TextField salesAssoTextField;
+    private ComboBox<LoginAccount> salesAsso;
     @FXML
     private TextField commStartTextField;
     @FXML
@@ -94,6 +95,7 @@ public class OfficeManagerController implements Initializable {
         // TODO
         warehousesComboBox.setItems(Main.warehouseDB);
         checkStockWh.setItems(Main.warehouseDB);
+        salesAsso.setItems(LoginAccount.users);
     }    
 
     @FXML
@@ -121,7 +123,7 @@ public class OfficeManagerController implements Initializable {
     @FXML
     private void HandleGeneratePaycheck(ActionEvent event) {
 
-        String salesAsso = salesAssoTextField.getText();
+        LoginAccount sa = (SalesAssociate) salesAsso.getSelectionModel().getSelectedItem();
     }
 
     @FXML

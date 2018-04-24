@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OfficeManagerController">
+<AnchorPane id="AnchorPane" disable="false" prefHeight="357.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OfficeManagerController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="358.0" prefWidth="470.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -24,7 +24,7 @@
               <children>
                 <TextArea fx:id="checkStockTextArea" editable="false" layoutX="14.0" layoutY="118.0" prefHeight="195.0" prefWidth="430.0" wrapText="true" />
                 <TextField id="findUnitsLabel" fx:id="findUnitsTextField" layoutX="186.0" layoutY="37.0" prefWidth="71.0" />
-                <Label layoutX="36.0" layoutY="41.0" text="Find Parts with Less Than" />
+                <Label layoutX="3.0" layoutY="40.0" text="Find Parts with Less Than" />
                 <Label layoutX="268.0" layoutY="40.0" text="Units" />
                 <Button fx:id="locateLessButton" layoutX="169.0" layoutY="85.0" mnemonicParsing="false" onAction="#HandleCheckStockButton" text="Locate" />
                         <Button layoutX="382.0" layoutY="24.0" mnemonicParsing="false" onAction="#logOutButtonMethod" text="Log Out" />
@@ -112,7 +112,6 @@
                 <Label layoutX="40.0" layoutY="90.0" text="Date Range:" />
                 <Label font="$x1" layoutX="218.0" layoutY="85.0" prefHeight="22.0" prefWidth="24.0" text="to" />
                 <Label layoutX="31.0" layoutY="17.0" text="Sales Associate:" />
-                <TextField id="clientNameTextField" fx:id="salesAssoTextField" layoutX="153.0" layoutY="12.0" prefWidth="200.0" />
                 <Button id="SearchInvButton" layoutX="160.0" layoutY="140.0" mnemonicParsing="false" onAction="#HandleGeneratePaycheck" text="Generate Paycheck" />
                 <TextArea id="ManageInvTextArea" fx:id="salesCommTextArea" layoutX="48.0" layoutY="174.0" prefHeight="141.0" prefWidth="365.0" wrapText="true" />
                 <ComboBox fx:id="fromSCMonthComboBox" layoutX="118.0" layoutY="63.0" prefHeight="25.0" prefWidth="78.0" promptText="Month">
@@ -169,6 +168,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
+                        <ComboBox fx:id="salesAsso" layoutX="160.0" layoutY="12.0" prefWidth="150.0" />
               </children>
             </AnchorPane>
           </content>

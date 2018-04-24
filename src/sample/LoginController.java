@@ -6,6 +6,8 @@ import basic.LoginAccount;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,7 +57,7 @@ public class LoginController implements Initializable{
         password = passwordField.getText();
 
         LoginAccount la = LoginAccount.verify(userName, password);
-        ArrayList<LoginAccount> users = LoginAccount.getUsers(); 
+        ObservableList<LoginAccount> users = LoginAccount.getUsers();
 
         if (la == null){
             System.out.println("User name or password is incorrect.");

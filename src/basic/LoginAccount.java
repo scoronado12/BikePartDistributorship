@@ -1,5 +1,8 @@
 package basic;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 
 /**
@@ -11,7 +14,8 @@ public class LoginAccount extends Person {
 
 
 
-	public static ArrayList<LoginAccount> users = new ArrayList<LoginAccount>(); //database of users
+	//public static ArrayList<LoginAccount> users = new ArrayList<LoginAccount>(); //database of users
+	public static ObservableList<LoginAccount> users = FXCollections.observableArrayList();
 	protected String username;
 	protected String password;
 	protected Person person;
@@ -43,7 +47,7 @@ public class LoginAccount extends Person {
 		return users.size();
 	}
 	
-	public static ArrayList<LoginAccount> getUsers(){
+	public static ObservableList<LoginAccount> getUsers(){
 		return users;
 	}
 	

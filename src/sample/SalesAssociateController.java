@@ -94,7 +94,6 @@ public class SalesAssociateController implements Initializable {
     		String toVan = moveTextField.getText();
     		moveTextField.clear();
             vanTextArea.appendText(fileActions.catFile(toVan));
-
             /*if (Main.getCurrentUser() instanceof SalesAssociate){
 
                 Main.getCurrentUser().

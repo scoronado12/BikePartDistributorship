@@ -34,6 +34,7 @@ import javafx.stage.Stage;
  * @author Tripp
  */
 public class WHManagerController implements Initializable {
+	WhManager user = Main.getWhManAcct();
 	boolean nameMode = false;
 	boolean numberMode = false;
 

@@ -32,6 +32,7 @@ import javafx.stage.Stage;
  * @author Tripp
  */
 public class SystemAdminController implements Initializable {
+	SysAdmin user = Main.getAdminAcct();
 
     @FXML
     private MenuButton AcctTypeMenu;

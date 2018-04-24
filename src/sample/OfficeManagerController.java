@@ -33,6 +33,7 @@ import javafx.stage.Stage;
  * @author Tripp
  */
 public class OfficeManagerController implements Initializable {
+	OfficeManager user = Main.getOffAcct();
 
     @FXML
     private TextArea checkStockTextArea;

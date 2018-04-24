@@ -12,7 +12,6 @@ import java.util.ArrayList;
  *
  */
 public class OfficeManager extends LoginAccount {
-	
 	/**
      * OfficeManager Constructor
      *

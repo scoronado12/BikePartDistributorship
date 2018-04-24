@@ -96,6 +96,7 @@ public class OfficeManagerController implements Initializable {
         warehousesComboBox.setItems(Main.warehouseDB);
         checkStockWh.setItems(Main.warehouseDB);
         salesAsso.setItems(LoginAccount.users);
+
     }    
 
     @FXML
@@ -118,12 +119,15 @@ public class OfficeManagerController implements Initializable {
 
 
 
+
     }
 
     @FXML
     private void HandleGeneratePaycheck(ActionEvent event) {
 
-        LoginAccount sa = (SalesAssociate) salesAsso.getSelectionModel().getSelectedItem();
+        LoginAccount sa = salesAsso.getSelectionModel().getSelectedItem();
+        user.generatePaycheckAndOrderParts((SalesAssociate) sa);
+
     }
 
     @FXML

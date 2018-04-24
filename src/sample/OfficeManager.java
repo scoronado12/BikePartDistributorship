@@ -104,5 +104,9 @@ public class OfficeManager extends LoginAccount {
     		}
     	out.close();
 	}
+	@Override
+	public String toString(){
+		return "OfficeManager: " + firstName +" " +lastName + " " + username;
+	}
 
 }

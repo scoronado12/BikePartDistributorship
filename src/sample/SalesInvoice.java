@@ -17,7 +17,7 @@ public class SalesInvoice {
 
 	
 	String customerName;
-	DateFormat dateFormat = new SimpleDateFormat("HH:mm");
+	DateFormat dateFormat = new SimpleDateFormat("yyyy-mmmm-dd");
     Date time = new Date();
 	String employeeName;
 	BikePart partSold;

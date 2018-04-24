@@ -60,19 +60,21 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-
+    	ArrayList<BikePart> empty = new ArrayList<BikePart>();
         //John or Tripp the sales associate
-        Warehouse tripSV = new Warehouse("Tripp's SalesVan", new ArrayList<BikePart>());
+        Warehouse tripSV = new Warehouse("Tripp's SalesVan", empty);
         SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans", tripSV);
         LoginAccount.users.add(saTripp);
-        warehouseDB.add(tripSV); //salesVan
+        warehouseDB.add(saTripp.getSalesVan()); //salesVan
 
         //Mitchell the warehouse Manager
-        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");
+        Warehouse MitchSV = new Warehouse("Mitchell's Warehouse", empty);
+        WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson", MitchSV);
         LoginAccount.users.add(WManMitchell);
         //warehouseDB.add(WManMitchell.getWh());
 
-        WhManager johnDoe = new WhManager("jdoe", "password", "John", "Doe", "DoesWH");
+        Warehouse JohnSV = new Warehouse("John's SalesVan", empty);
+        WhManager johnDoe = new WhManager("jdoe", "password", "John", "Doe", JohnSV);
         LoginAccount.users.add(johnDoe);
         //warehouseDB.add(johnDoe.getWh());
 

@@ -129,7 +129,7 @@ public class SalesAssociateController implements Initializable {
 
 
 
-    	SalesInvoice si = new SalesInvoice(clientTextField.getText(), , );
+    	//SalesInvoice si = new SalesInvoice(clientTextField.getText(), , );
     	
     }
     

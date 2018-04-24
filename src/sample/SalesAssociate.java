@@ -29,7 +29,11 @@ public class SalesAssociate extends LoginAccount {
         
     }
     
-    /**
+    public SalesAssociate() {
+		
+	}
+
+	/**
      * sell Method ; when a SalesAssociate sells a part, adds the salesInvoice generated to totalSales
      * 
      * @param customerName ; name of the customer the part is sold to

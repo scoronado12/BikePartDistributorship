@@ -37,7 +37,11 @@ public class WhManager extends LoginAccount {
         wh.setName(warehouseName);
     }
 
-    public void displayInventory(){
+    public WhManager() {
+    	
+    }
+
+	public void displayInventory(){
     	wh.printAll();
     }
     

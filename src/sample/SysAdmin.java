@@ -20,7 +20,11 @@ public class SysAdmin extends LoginAccount {
         super(username, password, firstName, lastName);
     }
 
-    /**
+    public SysAdmin() {
+		
+	}
+
+	/**
      * createUser - creates a new user
      * @param newUser
      */

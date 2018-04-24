@@ -28,6 +28,9 @@ public class OfficeManager extends LoginAccount {
 	public OfficeManager(String username, String password, String firstName, String lastName) {
         super(username, password, firstName, lastName);
     }
+	public OfficeManager() {
+		
+	}
 	/**
 	 * generatePaycheckAndOrderParts ; a method that generates a paycheck, orders the parts that have been sold,
 	 * and clears the SalesAssociate's totalSales, so he can't be paid for the same sales twice.

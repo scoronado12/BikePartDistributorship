@@ -31,7 +31,7 @@ import javafx.stage.Stage;
  * @author Tripp
  */
 public class SalesAssociateController implements Initializable {
-	LoginAccount user = Main.getCurrentUser();
+	SalesAssociate user = Main.getSalesAcct();
 
     @FXML
     private TextArea vanTextArea;

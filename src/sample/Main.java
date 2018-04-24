@@ -18,7 +18,10 @@ public class Main extends Application {
      *  Keeps track of Warehouses
      */
     public static ObservableList<Warehouse> warehouseDB;
-    public static LoginAccount currentUser = new LoginAccount();
+    public static SalesAssociate SalesAccount = new SalesAssociate();
+    public static OfficeManager OffAccount = new OfficeManager();
+    public static WhManager WhAccount = new WhManager();
+    public static SysAdmin SysAccount = new SysAdmin();
 
 
     /**
@@ -79,10 +82,37 @@ public class Main extends Application {
         launch(args);
     }
 
-	public static void accountTransfer(LoginAccount la) {
-		currentUser = la;
+	public static void SysTransfer(SysAdmin sysAccount) {
+		SysAccount = sysAccount;
 	}
-	public static LoginAccount getCurrentUser() {
-		return currentUser;
+	public static SysAdmin getAdminAcct() {
+		return SysAccount;
+	}
+
+	
+	
+	public static void SalesTransfer(SalesAssociate salesAccount) {
+		SalesAccount = salesAccount;	
+	}
+	public static SalesAssociate getSalesAcct() {
+		return SalesAccount;
+	}
+
+	
+	
+	public static void WhManTransfer(WhManager whAccount) {
+		WhAccount = whAccount;
+	}
+	public static WhManager getWhManAcct() {
+		return WhAccount;
+	}
+
+	
+	
+	public static void OffManTransfer(OfficeManager offAccount) {
+		OffAccount = offAccount;	
+	}
+	public static OfficeManager getOffAcct() {
+		return OffAccount;
 	}
 }

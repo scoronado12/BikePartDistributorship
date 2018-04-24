@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesAssociateController">
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="443.99995585936995" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SalesAssociateController">
   <children>
     <TabPane layoutX="0.0" layoutY="0.0" prefHeight="423.0" prefWidth="444.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
@@ -19,7 +21,7 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <Label layoutX="80.0" layoutY="111.0" text="Import Inventory:" />
+                <Label layoutX="14.0" layoutY="111.0" text="Inventory Movement File:" />
                 <TextArea fx:id="vanTextArea" layoutX="50.0" layoutY="213.0" prefHeight="165.0" prefWidth="345.0" wrapText="true" />
                 <Button fx:id="moveButton" layoutX="183.0" layoutY="157.0" mnemonicParsing="false" onAction="#handleMoveInvButton" text="Add to Van" />
                 <TextField id="moveTextArea" fx:id="moveTextField" layoutX="202.0" layoutY="106.0" prefWidth="174.99993896484375" promptText="Transfer File Path" />
@@ -29,6 +31,8 @@
                   </font>
                 </Label>
                         <Button layoutX="333.0" layoutY="20.0" mnemonicParsing="false" onAction="#logOutButtonMethod" text="Log Out" />
+                        <ComboBox fx:id="sourceWh" layoutX="14.0" layoutY="132.0" prefWidth="150.0" />
+                        <ComboBox fx:id="destWh" layoutX="14.0" layoutY="170.0" prefWidth="150.0" promptText="Destination Wh" />
               </children>
             </AnchorPane>
           </content>
@@ -40,7 +44,7 @@
                 <Label id="QuanLabel" fx:id="quanLabel" layoutX="335.0" layoutY="67.0" text="Qty:" visible="false" />
                 <TextField id="searchTextArea" fx:id="clientTextField" layoutX="166.0" layoutY="36.0" prefWidth="250.0" visible="false" />
                 <TextField id="quanTextArea" fx:id="quanTextField" layoutX="357.0" layoutY="64.0" prefWidth="59.0" visible="false" />
-                <Button fx:id="addPartButton" layoutX="4.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleAddToSaleArrayAction" text="Add to Sale Invoice" />
+                <Button fx:id="addPartButton" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleAddToSaleArrayAction" text="Add to Sale Invoice" />
                 <Button fx:id="completeButton" layoutX="172.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleCompleteSaleAction" prefHeight="28.0" prefWidth="100.0" text="Complete Sale">
                   <tooltip>
                     <Tooltip text="Warning: Be sure to enter all sold parts before proceeding with the sale." />
@@ -55,8 +59,11 @@
                 </Label>
                 <Label id="salesAssoNameLabel" fx:id="nameLabel" layoutX="145.0" layoutY="67.0" text="Enter Name:" visible="false" />
                 <Label id="salesAssoNumLabel" fx:id="numLabel" layoutX="133.0" layoutY="67.0" text="Enter Number:" visible="false" />
-                <RadioButton fx:id="nameRadio" layoutX="17.0" layoutY="42.0" mnemonicParsing="false" onAction="#HandleSellByName" text="Part Name" />
-                <RadioButton fx:id="numberRadio" layoutX="17.0" layoutY="67.0" mnemonicParsing="false" onAction="#HandleSellByNumber" text="Part Number" />
+                <RadioButton fx:id="nameRadio" layoutX="17.0" layoutY="42.0" mnemonicParsing="false" onAction="#HandleSellByName" text="Part Name">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="findByGroup" />
+                           </toggleGroup></RadioButton>
+                <RadioButton fx:id="numberRadio" layoutX="17.0" layoutY="67.0" mnemonicParsing="false" onAction="#HandleSellByNumber" text="Part Number" toggleGroup="$findByGroup" />
                 <Label fx:id="entPromptLabel" font="$x2" layoutX="152.0" layoutY="11.0" text="Enter Part Information:" visible="false" />
                 <TextField id="numNameLabel" fx:id="searchTextField" layoutX="210.0" layoutY="64.0" prefWidth="111.0" visible="false" />
                 <Label fx:id="clientLabel" layoutX="133.0" layoutY="39.0" text="Client:" visible="false" />

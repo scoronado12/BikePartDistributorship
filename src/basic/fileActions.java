@@ -153,7 +153,7 @@ public class fileActions {
      */
 
 
-    public static void readForTransfer(String fileName) {
+    public static void readForTransfer(String fileName) { // sa and whmanager
 
         String itemAmount = "";
         Warehouse src = null;

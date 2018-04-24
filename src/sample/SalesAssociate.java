@@ -5,11 +5,12 @@ import basic.LoginAccount;
 import basic.Warehouse;
 import basic.BikePart;
 
+import static sample.WhManager.wh;
+
 public class SalesAssociate extends LoginAccount {
-	
-	protected static Warehouse wh = new Warehouse();
-	protected static String salesVan;
-	
+
+
+    private static Warehouse salesVan;
     /**
      * SalesAssociate Constructor
      *
@@ -22,11 +23,10 @@ public class SalesAssociate extends LoginAccount {
 	//ArrayList to keep track of each sale
 	ArrayList<SalesInvoice> totalSales = new ArrayList<SalesInvoice>();
 	
-    public SalesAssociate(String username, String password, String firstName, String lastName, String salesVan) {
+    public SalesAssociate(String username, String password, String firstName, String lastName, Warehouse salesVan) {
         super(username, password, firstName, lastName);
         this.salesVan = salesVan;
-        wh.setName(salesVan);
-        
+
     }
     
     public SalesAssociate() {
@@ -47,8 +47,8 @@ public class SalesAssociate extends LoginAccount {
     }
 
 
-    public Warehouse getWh(){ return this.wh; }
-    
+    public Warehouse getWh(){ return wh; }
+
     public ArrayList<SalesInvoice> getTotalSales(){
     	return totalSales;
     }
@@ -57,7 +57,7 @@ public class SalesAssociate extends LoginAccount {
     	totalSales.clear();
     }
     
-    public static String getSalesVan() {
+    public Warehouse getSalesVan() {
     	return salesVan;
     }
 

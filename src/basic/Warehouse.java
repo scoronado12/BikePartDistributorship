@@ -91,6 +91,26 @@ public class Warehouse{
 
     }
 
+    /**printAllwithStockLessThan(int n)
+     * Prints out everything in the warehouse that is less than or equal to the passed number
+     *
+     * @return s - String
+     */
+
+    public String printAllwithStockLessThan(int n){
+        String s = "";
+        int i = 0;
+        for (BikePart bp : BikePartList){
+            if (BikePartList.get(i).getQuantity() <= n) {
+                s += BikePartList.get(i).getPartName() + "\t" + BikePartList.get(i).getPartNumber() + "\t" + BikePartList.get(i).getListPrice() + "\t" + BikePartList.get(i).getSalesPrice() + "\t" + BikePartList.get(i).getQuantity() + "\t" + BikePartList.get(i).isOnSale() + "\n";
+            }else {
+                i++;
+            }
+        }
+        return s;
+
+    }
+
     /** remove() - removes a BikePart passed in
      *
      * @param bp

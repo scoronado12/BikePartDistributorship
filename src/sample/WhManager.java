@@ -44,6 +44,10 @@ public class WhManager extends LoginAccount {
     public String getWarehouse() {
     	return warehouseName;
     }
+
+    public Warehouse getWh() {
+        return wh;
+    }
     
     public void transferInventory(Warehouse source, Warehouse destination, BikePart bp, int quantityToMove){
 

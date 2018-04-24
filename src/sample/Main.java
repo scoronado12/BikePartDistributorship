@@ -88,7 +88,6 @@ public class Main extends Application {
 	public static void SysTransfer(SysAdmin sysAccount) {
 		SysAccount = sysAccount;
 	}
-<<<<<<< HEAD
 	public static SysAdmin getAdminAcct() {
 		return SysAccount;
 	}
@@ -118,10 +117,5 @@ public class Main extends Application {
 	}
 	public static OfficeManager getOffAcct() {
 		return OffAccount;
-=======
-
-	public static LoginAccount getCurrentUser() {
-		return currentUser;
->>>>>>> branch 'master' of https://github.com/scoronado12/BikePartDistributorship
 	}
 }

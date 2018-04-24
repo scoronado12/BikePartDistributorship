@@ -47,8 +47,8 @@ public class WhManager extends LoginAccount {
     
     public void transferInventory(Warehouse source, Warehouse destination, BikePart bp, int quantityToMove){
 
-        //if (source.findBp(bp.getPartNumber()) == bp ){ //if found in source
-        if (source.BikePartList.contains(bp)){
+
+        if (source.BikePartList.contains(bp)){ //if found in source
             //then remove that amount
             System.out.println("Removing " + quantityToMove + " from " + source.toString());
             source.bp.setQuantity(source.bp.getQuantity() - quantityToMove);

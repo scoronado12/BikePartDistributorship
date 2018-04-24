@@ -104,7 +104,8 @@ public class OfficeManagerController implements Initializable {
 
     @FXML
     private void HandleGeneratePaycheck(ActionEvent event) {
-    	String salesAsso = salesAssoTextField.getText();
+
+        String salesAsso = salesAssoTextField.getText();
     }
 
     @FXML
@@ -122,7 +123,7 @@ public class OfficeManagerController implements Initializable {
     	
     	//TODO Combo Box population - fill with warehouses
         /*
-         * This should be done in initialize
+         * This is done in initialize
          * - Stefano
          */
     	}

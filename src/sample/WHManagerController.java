@@ -169,7 +169,7 @@ public class WHManagerController implements Initializable {
     private void HandleAddButton(ActionEvent event) throws FileNotFoundException {
         if (radioNewInv.isSelected() == true) {
             String newFile = textFieldInv.getText();
-            WhManager.updateInventory(newFile);
+            user.updateInventory(newFile);
             textAreaInv.appendText("Inventory Added\n");
         }
         else if (radioUpdate.isSelected() == true) {
@@ -193,7 +193,7 @@ public class WHManagerController implements Initializable {
             double sale = Double.parseDouble(tfSale.getText());
             int quant = Integer.parseInt(tfQuan.getText());
             onSale = onSaleCheckBox.isSelected();
-            //Project2BikePart.manualEnter(name, number, price, sale, onSale, quant);
+            user.addToInventory(name, number, price, sale, onSale, quant);
             textAreaInv.appendText("Part has been added to your warehouse\n");
         }
         else {

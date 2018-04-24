@@ -90,20 +90,34 @@ public class WhManager extends LoginAccount {
      * @param quantity
      */
     public void addToInventory(String partName, int partNumber, double listPrice, double salesPrice, boolean isOnSale, int quantity) {
-    	BikePart temp = new BikePart(partName, partNumber, listPrice, salesPrice, isOnSale, quantity);
-    	wh.add(temp);
+    	boolean update = false;
+    	BikePart bp = new BikePart(partName, partNumber, listPrice, salesPrice, isOnSale, quantity);
+    	BikePart exists = wh.findBp(bp.getPartNumber());
+		if (exists != null) {
+            exists.setQuantity(exists.getQuantity() +
+                    bp.getQuantity());
+            exists.setPrice(bp.getListPrice());
+            exists.setSalesPrice(bp.getSalesPrice());
+            exists.setSale(bp.isOnSale());
+            update = true;
+        }
+		if (update == false) {
+			wh.smartAdd(bp);
+		}
+    	wh.add(bp);
     }
     //needs to take in a text file
-    public static void updateInventory(String fileName) throws FileNotFoundException {
+    public void updateInventory(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
+        boolean update = false;
         read = new Scanner(file);
         
         while(read.hasNextLine()) {
         	try 
     		{        
     			read = new Scanner(file);
-    			while (read.hasNextLine()) 
-    			{            
+    			while (read.hasNextLine()) {    
+    				update = false;
     				String line = read.nextLine();
     				String regExp = "\\s*(\\s|,)\\s*";
     				String[] splits = line.split(regExp);
@@ -116,12 +130,20 @@ public class WhManager extends LoginAccount {
     				int quantity = Integer.parseInt(splits[5]);
     				
     				BikePart bp = new BikePart(partName,partNum,partPrice,salesPrice,isSale,quantity);
-    				wh.smartAdd(bp);
-    				
-    				
-    				
+    				BikePart exists = wh.findBp(bp.getPartNumber());
+    				if (exists != null) {
+    		            exists.setQuantity(exists.getQuantity() +
+    		                    bp.getQuantity());
+    		            exists.setPrice(bp.getListPrice());
+    		            exists.setSalesPrice(bp.getSalesPrice());
+    		            exists.setSale(bp.isOnSale());
+    		            update = true;
+    		        }
+    				if (update == false) {
+    					wh.smartAdd(bp);
     				}
-    			}    
+    			}						
+    		}    
     		catch (FileNotFoundException e) {        
     			e.printStackTrace();
     		}

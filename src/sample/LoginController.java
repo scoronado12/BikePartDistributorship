@@ -104,7 +104,6 @@ public class LoginController implements Initializable{
         	
         	SysAdmin current = (SysAdmin) users.get(LoginAccount.getIndex());
         	Main.SysTransfer(current);
-            System.out.println("Logging in " + userName + " as SysAdmin");
             Parent homePageParent = FXMLLoader.load(getClass().getResource("SystemAdmin.fxml"));
             Scene homePageScene = new Scene(homePageParent);
             Stage projectStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

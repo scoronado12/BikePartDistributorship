@@ -114,12 +114,22 @@ public class SalesAssociateController implements Initializable {
     	numLabel.setVisible(false);
     	
     	nameLabel.setVisible(true);
+
     	entPromptLabel.setVisible(true);
+
     	searchTextField.setVisible(true);
+
     	clientLabel.setVisible(true);
+
     	clientTextField.setVisible(true);
+
     	quanLabel.setVisible(true);
+
     	quanTextField.setVisible(true);
+
+
+
+    	SalesInvoice si = new SalesInvoice(clientTextField.getText(), , );
     	
     }
     

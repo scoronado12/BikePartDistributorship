@@ -59,6 +59,7 @@ public class Main extends Application {
         //John the sales associate
         SalesAssociate saTripp = new SalesAssociate("tripp", "pass", "John", "Evans", "SalesVan1");
         LoginAccount.users.add(saTripp);
+        warehouseDB.add(saTripp.getWh()); //salesVan
 
         //Mitchell the warehouse Manager
         WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson","BissonWares");
@@ -67,6 +68,7 @@ public class Main extends Application {
 
         WhManager johnDoe = new WhManager("jdoe", "password", "John", "Doe", "DoesWH");
         LoginAccount.users.add(johnDoe);
+        warehouseDB.add(johnDoe.getWh());
 
         //Sysadmin Stefano
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");
@@ -83,6 +85,7 @@ public class Main extends Application {
 	public static void accountTransfer(LoginAccount la) {
 		currentUser = la;
 	}
+
 	public static LoginAccount getCurrentUser() {
 		return currentUser;
 	}

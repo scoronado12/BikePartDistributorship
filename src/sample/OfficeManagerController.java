@@ -111,6 +111,10 @@ public class OfficeManagerController implements Initializable {
     private void HandleSearchInvoicesButton(ActionEvent event) {
 
         String client = clientNameTextField.getText();
+
+
+
+
     }
 
     @FXML

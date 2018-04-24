@@ -257,19 +257,6 @@ public class WHManagerController implements Initializable {
 
 
     }
-    @FXML
-    private void HandleSortName(ActionEvent event) {
-        nameMode = true;
-        numberMode = false;
-        menuSort.setText("Part Name");
-    }
-
-    @FXML
-    private void HandleSortNumber(ActionEvent event) {
-        numberMode = true;
-        nameMode = false;
-        menuSort.setText("Part Number");
-    }
 
     @FXML
     private void addBikePart(){

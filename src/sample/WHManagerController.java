@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ResourceBundle;
 
 import basic.BikePart;
@@ -105,14 +106,9 @@ public class WHManagerController implements Initializable {
     @FXML
     private Button sortButton;
     @FXML
-    private MenuButton menuSort;
+    private CheckBox sortPNum;
     @FXML
-    private MenuItem byName;
-    @FXML
-    private MenuItem byNumber;
-    @FXML
-    private Label urWHLabel;
-
+    private CheckBox sortPartName;
     /**
      * Initializes the controller class.
      */
@@ -243,24 +239,23 @@ public class WHManagerController implements Initializable {
     }
 
     @FXML
-    private void HandleSortButton(ActionEvent event) {/*
-        ArrayList<String> printList = new ArrayList<>();
-        //String sortTarget = WhManager.getWh().toString();
-        if (nameMode == true) {
-           // printList = Project2BikePart.sortName(sortTarget);
-            textAreaSort.appendText(sortTarget + " sorted alphabetically:\n");
+    private void HandleSortButton(ActionEvent event) {
+
+        if (sortPartName.isSelected()){
+            System.out.println("Sorting by Part Name");
+            Collections.sort(user.getWh().getBPList(), new ComparatorByPartName());
+            textAreaSort.appendText(user.getWh().printAll());
+
+        } else if (sortPNum.isSelected()){
+            System.out.println("Sorting by Part Number");
+            Collections.sort(user.getWh().getBPList(), new ComparatorByPartNum());
+            textAreaSort.appendText(user.getWh().printAll());
         }
-        else if (numberMode == true) {
-            //printList = Project2BikePart.sortNumber(sortTarget);
-            textAreaSort.appendText(sortTarget + " sorted numerically:\n");
-        }
-        else {
-            textAreaSort.appendText("Please choose a sort method.\n");
-        }
-        for (int i = 0; printList.size() > i; i++) {
-            textAreaSort.appendText(printList.get(i) + "\n");
-        }
-        textAreaSort.appendText("\n");*/
+
+
+
+
+
     }
     @FXML
     private void HandleSortName(ActionEvent event) {
@@ -288,6 +283,9 @@ public class WHManagerController implements Initializable {
         BikePart bp = new BikePart(partName, partNum, listPrice, salesPrice, saleOrNot, quantity);
 
         //add bp to proper warehouse
+
+        user.getWh().add(bp);
+
 
         tfName.clear();
         tfPartNo.clear();

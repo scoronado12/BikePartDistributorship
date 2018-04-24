@@ -32,9 +32,8 @@ public class WhManager extends LoginAccount {
  * @param lastName ; user's last name
  * @param warehouseName ; name of the warehouse user is managing
  */
-    public WhManager(String username, String password, String firstName, String lastName, String warehouseName) {
+    public WhManager(String username, String password, String firstName, String lastName, Warehouse warehouse) {
         super(username, password, firstName, lastName);
-        wh.setName(warehouseName);
     }
 
     public WhManager() {

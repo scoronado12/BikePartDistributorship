@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import basic.BikePart;
 import basic.LoginAccount;
 import basic.Warehouse;
 import javafx.event.ActionEvent;
@@ -128,7 +129,8 @@ public class SystemAdminController implements Initializable {
         		String email = emailTextField.getText();
         		String username = userTextField.getText();
         		String password = passTextField.getText();
-        		String van = wHSATextField.getText();
+        		ArrayList<BikePart> empty = new ArrayList<>();
+        		Warehouse van = new Warehouse(wHSATextField.getText(), empty);
     			SalesAssociate sA = new SalesAssociate(username, password, firstName,
     					lastName, van);
 				LoginAccount.users.add(sA);
@@ -153,8 +155,8 @@ public class SystemAdminController implements Initializable {
         		String email = emailTextField.getText();
         		String username = userTextField.getText();
         		String password = passTextField.getText();
-        		String warehouse = wHSATextField.getText();
-        		
+        		ArrayList<BikePart> empty = new ArrayList<>();
+        		Warehouse warehouse = new Warehouse(wHSATextField.getText(), empty);
     			WhManager wM = new WhManager(username, password, firstName,
     					lastName, warehouse);
     			LoginAccount.users.add(wM);

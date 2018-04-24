@@ -9,6 +9,7 @@ package sample;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+import java.util.ArrayList;
 import java.util.Date;
 import basic.BikePart;
 
@@ -22,6 +23,8 @@ public class SalesInvoice {
 	BikePart partSold;
 	double totalCost;
 	int totalQuantity;
+
+	ArrayList<SalesInvoice> soldBikeParts = new ArrayList<SalesInvoice>();
 	/**
 	 * Constructor for a sales invoice
 	 * @param custName ; customer's name
@@ -36,6 +39,7 @@ public class SalesInvoice {
 		totalQuantity = quantitySold;
 		totalCost = bp.getPrice() * quantitySold;
 	}
+
 	/**
 	 * setCustomerName
 	 * @param custName ; what the customer's name will be set to

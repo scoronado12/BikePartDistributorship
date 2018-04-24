@@ -82,6 +82,8 @@ public class OfficeManagerController implements Initializable {
     private Label databaseLabel;
     @FXML
     private ComboBox<Warehouse> warehousesComboBox;
+    @FXML
+    private ComboBox<Warehouse> checkStockWh;
 
     /**
      * Initializes the controller class.
@@ -90,16 +92,29 @@ public class OfficeManagerController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         warehousesComboBox.setItems(Main.warehouseDB);
+        checkStockWh.setItems(Main.warehouseDB);
     }    
 
     @FXML
     private void HandleCheckStockButton(ActionEvent event) {
-    	int minStock = Integer.parseInt(findUnitsTextField.getText());
+    	checkStockTextArea.clear();
+
+        int minStock = Integer.parseInt(findUnitsTextField.getText());
+
+    	Warehouse selectedItem = checkStockWh.getSelectionModel().getSelectedItem();
+
+    	checkStockTextArea.appendText(selectedItem.printAllwithStockLessThan(minStock));
+
     }
 
     @FXML
     private void HandleSearchInvoicesButton(ActionEvent event) {
-    	String client = clientNameTextField.getText();
+
+        String client = clientNameTextField.getText();
+
+
+
+
     }
 
     @FXML

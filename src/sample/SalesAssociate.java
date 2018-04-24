@@ -47,7 +47,7 @@ public class SalesAssociate extends LoginAccount {
     }
 
 
-
+    public Warehouse getWh(){ return this.wh; }
     
     public ArrayList<SalesInvoice> getTotalSales(){
     	return totalSales;

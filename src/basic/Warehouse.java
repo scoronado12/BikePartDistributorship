@@ -19,7 +19,7 @@ public class Warehouse{
 
     public BikePart bp;
     public Warehouse wh;
-    public ArrayList<BikePart> BikePartList = new ArrayList<>();
+    private ArrayList<BikePart> BikePartList = new ArrayList<>();
 
 
     /** Warehouse Object
@@ -31,7 +31,6 @@ public class Warehouse{
     public Warehouse(String warehouseName, ArrayList<BikePart> inventory){
 
         this.warehouseName = warehouseName;
-
         this.BikePartList = inventory;
 
     }
@@ -43,7 +42,9 @@ public class Warehouse{
       public Warehouse(){
       warehouseName = "Default";
      }
-      
+      public ArrayList<BikePart> getBPList(){
+    	  return BikePartList;
+      }
       /**
        * setName()
        * sets the name of the warehouse

@@ -193,7 +193,7 @@ public class fileActions {
                     System.out.println("FileActions.readForTransfer() :Transferring " + amount + " from " + src.toString() + " to " + destWh.toString());
                     String partName = itemAmountParts[0];
 
-                    if (src.BikePartList.contains(src.findBp(partName))) {
+                    if (src.getBPList().contains(src.findBp(partName))) {
                         Warehouse.transfer(src, destWh, amount, src.findBp(partName)); //bp is from src
 
                     } else {

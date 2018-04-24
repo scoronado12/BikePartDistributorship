@@ -54,8 +54,8 @@ public class WhManager extends LoginAccount {
     
     public void transferInventory(Warehouse source, Warehouse destination, BikePart bp, int quantityToMove){
 
-
-        if (source.BikePartList.contains(bp)){ //if found in source
+    	ArrayList<BikePart> BikePartList = wh.getBPList();
+        if (BikePartList.contains(bp)){ //if found in source
             //then remove that amount
             System.out.println("Removing " + quantityToMove + " from " + source.toString());
             source.bp.setQuantity(source.bp.getQuantity() - quantityToMove);
@@ -63,7 +63,7 @@ public class WhManager extends LoginAccount {
             System.out.println("BikePart does not exist in " + source.toString());
         }
 
-        if (destination.BikePartList.contains(bp)){
+        if (BikePartList.contains(bp)){
 
             destination.bp.setQuantity(destination.bp.getQuantity() + quantityToMove);
 

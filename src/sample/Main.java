@@ -4,6 +4,7 @@ import basic.BikePart;
 import basic.LoginAccount;
 import basic.Warehouse;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +20,7 @@ public class Main extends Application {
     /** WarehouseDB
      *  Keeps track of Warehouses
      */
-    public static ObservableList<Warehouse> warehouseDB;
+    public static ObservableList<Warehouse> warehouseDB = FXCollections.observableArrayList();
     public static SalesAssociate SalesAccount = new SalesAssociate();
     public static OfficeManager OffAccount = new OfficeManager();
     public static WhManager WhAccount = new WhManager();
@@ -71,12 +72,12 @@ public class Main extends Application {
         Warehouse MitchSV = new Warehouse("Mitchell's Warehouse", empty);
         WhManager WManMitchell = new WhManager("mitchell", "1234", "Mitchell", "Bisson", MitchSV);
         LoginAccount.users.add(WManMitchell);
-        //warehouseDB.add(WManMitchell.getWh());
+        warehouseDB.add(WManMitchell.getWh());
 
         Warehouse JohnSV = new Warehouse("John's SalesVan", empty);
         WhManager johnDoe = new WhManager("jdoe", "password", "John", "Doe", JohnSV);
         LoginAccount.users.add(johnDoe);
-        //warehouseDB.add(johnDoe.getWh());
+        warehouseDB.add(johnDoe.getWh());
 
         //Sysadmin Stefano
         SysAdmin SysAdminStefano = new SysAdmin("scoronado", "password", "Stefano","Coronado");

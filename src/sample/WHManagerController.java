@@ -114,7 +114,7 @@ public class WHManagerController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    	yourWHLabel.setText(user.getWarehouse());
     }    
 
     @FXML
@@ -198,6 +198,7 @@ public class WHManagerController implements Initializable {
             textAreaInv.appendText("Please be sure to fill all fields.\n");
         }
     }
+
 
     @FXML
     private void HandleNameSearch(ActionEvent event) {

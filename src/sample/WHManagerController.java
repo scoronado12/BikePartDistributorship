@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import basic.BikePart;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -273,6 +275,30 @@ public class WHManagerController implements Initializable {
         nameMode = false;
         menuSort.setText("Part Number");
     }
+
+    @FXML
+    private void addBikePart(){
+        String partName = tfName.getText();
+        int partNum = Integer.parseInt(tfPartNo.getText());
+        double listPrice = Double.parseDouble(tfPrice.getText());
+        double salesPrice = Double.parseDouble(tfSale.getText());
+        boolean saleOrNot = onSaleCheckBox.isSelected();
+        int quantity = Integer.parseInt(tfQuan.getText());
+
+        BikePart bp = new BikePart(partName, partNum, listPrice, salesPrice, saleOrNot, quantity);
+
+        //add bp to proper warehouse
+
+        tfName.clear();
+        tfPartNo.clear();
+        tfPrice.clear();
+        tfSale.clear();
+        onSaleCheckBox.setSelected(false); // should reset that
+        tfQuan.clear();
+
+
+    }
+
 
     @FXML
     private void logOutButtonMethod(ActionEvent event) throws IOException {

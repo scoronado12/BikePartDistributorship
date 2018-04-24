@@ -162,6 +162,12 @@ public class fileActions {
             File file = new File(fileName);
             try{
                 Scanner reader = new Scanner(file);
+                //always assume that first line specifies details of transfer
+                String sourceDest = reader.nextLine(); //grab first line as one String
+                String sourceDestParts[] = sourceDest.split(","); // sourceDestParts[0] = source; parts[1] = dest; both of String
+
+
+
 
                 while (reader.hasNextLine()) {
                     itemAmount = reader.nextLine();

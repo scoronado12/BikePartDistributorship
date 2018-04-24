@@ -76,6 +76,19 @@ public class WhManager extends LoginAccount {
 
 
     }
+    /**
+     * addToInventory manually add a bikepart
+     * @param partName
+     * @param partNumber
+     * @param listPrice
+     * @param salesPrice
+     * @param isOnSale
+     * @param quantity
+     */
+    public void addToInventory(String partName, int partNumber, double listPrice, double salesPrice, boolean isOnSale, int quantity) {
+    	BikePart temp = new BikePart(partName, partNumber, listPrice, salesPrice, isOnSale, quantity);
+    	wh.add(temp);
+    }
     //needs to take in a text file
     public static void updateInventory(String fileName) throws FileNotFoundException {
         File file = new File(fileName);

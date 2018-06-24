@@ -3,8 +3,6 @@ package basic;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.ArrayList;
-
 /**
  * A simple login account with a username and password, as well as a name and email
  * @author Mitchell Bisson

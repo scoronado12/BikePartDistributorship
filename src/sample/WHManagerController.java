@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.ResourceBundle;
 
 import basic.BikePart;
+import basic.fileActions;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -170,7 +171,7 @@ public class WHManagerController implements Initializable {
     private void HandleAddButton(ActionEvent event) throws FileNotFoundException {
         if (radioNewInv.isSelected() == true) {
             String newFile = textFieldInv.getText();
-            user.updateInventory(newFile);
+            fileActions.importRead(newFile);
             textAreaInv.appendText("Inventory Added\n");
         }
         else if (radioUpdate.isSelected() == true) {
